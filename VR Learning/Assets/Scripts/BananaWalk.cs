@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BananaWalk : MonoBehaviour
@@ -14,5 +12,6 @@ public class BananaWalk : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _rb.AddForce(_forceDirection * _force, _forceMode);
+        Destroy(gameObject, 4f);
     }
 }

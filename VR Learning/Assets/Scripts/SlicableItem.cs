@@ -10,14 +10,16 @@ public class SlicableItem : MonoBehaviour
     [SerializeField] private float _explosionUpwardsModifier;
     [SerializeField] private ForceMode _explosionForceMode;
     
-    public void Slice(Vector3 slicePosition)
+    public void Slice(Vector3 explosionPosition)
     {
+        
         Destroy(GetComponent<Collider>());
         Destroy(GetComponent<Rigidbody>());
         foreach (var part in _parts)
         {
             part.isKinematic = false;
-            part.AddExplosionForce(_explosionForce, slicePosition, _explosionRadius, _explosionUpwardsModifier, _explosionForceMode);
+            part.GetComponent<BoxCollider>().isTrigger = false;
+            part.AddExplosionForce(_explosionForce, explosionPosition, _explosionRadius, _explosionUpwardsModifier, _explosionForceMode);
         }    
         Destroy(gameObject, 3f);
     }
