@@ -15,7 +15,7 @@ public class Slicer : MonoBehaviour
     [SerializeField] private Text _numberOfElementsCut;
     
     [SerializeField] private Transform explosionPosition;
-    [SerializeField] private Transform _debugPoint;
+    // [SerializeField] private Transform _debugPoint;
     private Bounds _bounds;
     private Vector3 _extents;
     private void Start()
@@ -33,7 +33,7 @@ public class Slicer : MonoBehaviour
         var hits = Physics.BoxCastAll(_bounds.center - new Vector3(0,0.1f,0.1f), _extents, (_bounds.center - _startPoint.position), 
             _collider.transform.rotation, _bladeLength, _slicablesMask, QueryTriggerInteraction.Collide);
         Debug.Log(_bounds.size.x / _extents.x + " : "  + _bounds.size.y / _extents.y + " : " + _bounds.size.z / _extents.z);
-        _debugPoint.position = _bounds.center;
+        // _debugPoint.position = _bounds.center;
         Debug.DrawRay(_startPoint.position, _bounds.center - _startPoint.position, Color.blue);
         ExtDebug.DrawBox(_bounds.center - new Vector3(0,0.01f,0.01f), _extents, _collider.transform.rotation, Color.blue);
         if (hits.Length == 0)

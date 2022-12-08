@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20af41e851448bd4398baf4de88e71b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9129392
+      value: 1.106
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20af41e851448bd4398baf4de88e71b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4242635
+      value: -0.057
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 20af41e851448bd4398baf4de88e71b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -323,9 +323,6 @@ MonoBehaviour:
   _bladeLength: 0
   _numberOfElementsCut: {fileID: 856228649}
   explosionPosition: {fileID: 105847654}
-  _debugPoint: {fileID: 607977149}
-  _extents: {x: 0.012, y: 0.045, z: 0.48}
-  _centerBlade: {fileID: 0}
 --- !u!65 &275987803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -337,8 +334,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.9413145, z: 46.799877}
-  m_Center: {x: -0, y: 1.4706597, z: 9.06793}
+  m_Size: {x: 0.37496144, y: 1.6606936, z: 46.290493}
+  m_Center: {x: -0.25728798, y: 1.8125068, z: 8.813239}
 --- !u!54 &275987804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -398,7 +395,7 @@ GameObject:
   m_Layer: 0
   m_Name: DebugPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1016,6 +1013,7 @@ MonoBehaviour:
   - {fileID: 3579354245903904306, guid: a8b585adac97ec6469ddab12fd82c8bd, type: 3}
   _fruitsSpawnPos:
   - {fileID: 231817790}
+  - {fileID: 1431049946}
 --- !u!1 &1526302707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,9 +1051,6 @@ MonoBehaviour:
   _bladeLength: 0
   _numberOfElementsCut: {fileID: 856228649}
   explosionPosition: {fileID: 105847654}
-  _debugPoint: {fileID: 0}
-  _extents: {x: 0, y: 0, z: 0}
-  _centerBlade: {fileID: 0}
 --- !u!4 &1526302709
 Transform:
   m_ObjectHideFlags: 0
