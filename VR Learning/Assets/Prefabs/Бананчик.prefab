@@ -64,8 +64,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.34468606, y: 0.11417186, z: 0.07466698}
-  m_Center: {x: -0.14806534, y: -0.02183497, z: -0.0059974194}
+  m_Size: {x: 0.34468606, y: 0.11417186, z: 0.06230721}
+  m_Center: {x: -0.14806534, y: -0.02183497, z: -0.0019459389}
 --- !u!114 &4538263637095041382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   _parts:
   - {fileID: 9069636621954118411}
   - {fileID: 4615482035800299532}
-  _explosionForce: 4
+  _explosionForce: 5
   _explosionRadius: 5
   _explosionUpwardsModifier: 0
   _explosionForceMode: 2

@@ -9,18 +9,33 @@ public class Slicer : MonoBehaviour
     [SerializeField] private BoxCollider _collider;
     [SerializeField] private LayerMask _slicablesMask;
     [SerializeField] private Transform _startPoint;
-    [SerializeField] private float _blageLegth;
-
+    [SerializeField] private float _bladeLength;
+    
+    
     [SerializeField] private Text _numberOfElementsCut;
     
     [SerializeField] private Transform explosionPosition;
+    [SerializeField] private Transform _debugPoint;
+    private Bounds _bounds;
+    private Vector3 _extents;
+    private void Start()
+    {
+        _bounds = _collider.bounds;
+        _extents.x = _bounds.size.x / 2.000001f; 
+        _extents.y = _bounds.size.y /  27.37729f; 
+        _extents.z = _bounds.size.z / 1.1f;
+    }
+
     private void FixedUpdate()
     {
-        var bounds = _collider.bounds;
+        _bounds = _collider.bounds;
         /*var colliders = Physics.OverlapBox(bounds.center, bounds.extents, _collider.transform.rotation, _slicablesMask, QueryTriggerInteraction.Collide);*/
-        var hits = Physics.BoxCastAll(bounds.center,bounds.extents, (bounds.center - _startPoint.position), 
-            _collider.transform.rotation, _blageLegth, _slicablesMask, QueryTriggerInteraction.Collide);
-        Debug.DrawRay(bounds.center, bounds.center - _startPoint.position, Color.green);
+        var hits = Physics.BoxCastAll(_bounds.center - new Vector3(0,0.1f,0.1f), _extents, (_bounds.center - _startPoint.position), 
+            _collider.transform.rotation, _bladeLength, _slicablesMask, QueryTriggerInteraction.Collide);
+        Debug.Log(_bounds.size.x / _extents.x + " : "  + _bounds.size.y / _extents.y + " : " + _bounds.size.z / _extents.z);
+        _debugPoint.position = _bounds.center;
+        Debug.DrawRay(_startPoint.position, _bounds.center - _startPoint.position, Color.blue);
+        ExtDebug.DrawBox(_bounds.center - new Vector3(0,0.01f,0.01f), _extents, _collider.transform.rotation, Color.blue);
         if (hits.Length == 0)
         {
             return;
