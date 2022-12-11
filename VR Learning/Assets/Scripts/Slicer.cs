@@ -17,13 +17,11 @@ public class Slicer : MonoBehaviour
     [SerializeField] private Transform explosionPosition;
     // [SerializeField] private Transform _debugPoint;
     private Bounds _bounds;
-    private Vector3 _extents;
+    [SerializeField] private Vector3 _extents;
     private void Start()
     {
         _bounds = _collider.bounds;
-        _extents.x = _bounds.size.x / 2.000001f; 
-        _extents.y = _bounds.size.y /  27.37729f; 
-        _extents.z = _bounds.size.z / 1.1f;
+        
     }
 
     private void FixedUpdate()
