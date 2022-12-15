@@ -1156,6 +1156,7 @@ MonoBehaviour:
   - {fileID: 3579354245903904306, guid: a8b585adac97ec6469ddab12fd82c8bd, type: 3}
   - {fileID: 5685991978609440364, guid: 435f9dade458c104f8856af06918118a, type: 3}
   - {fileID: 1637190419145961735, guid: 2b1c69acf8138e845b4b7b10fc74ae0a, type: 3}
+  - {fileID: 2058714828186535410, guid: 83500dbe7db37db48aeadc3a2aacb31c, type: 3}
   _fruitsSpawnPos:
   - {fileID: 231817790}
   - {fileID: 1431049946}
@@ -1245,6 +1246,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 860868966}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1187661634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187661636}
+  - component: {fileID: 1187661635}
+  m_Layer: 0
+  m_Name: SpriteClyaksa
+  m_TagString: SpriteClyaksa
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1187661635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187661634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d064d053682f5bb43a6198d655187073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blots:
+  - {fileID: 1625477634}
+  - {fileID: 1782554404}
+--- !u!4 &1187661636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187661634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1983472, y: -5.743675, z: -23.424078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1280220713
 GameObject:
@@ -1340,6 +1388,7 @@ RectTransform:
   m_Children:
   - {fileID: 856228648}
   - {fileID: 1625477633}
+  - {fileID: 1782554406}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1464,10 +1513,9 @@ GameObject:
   - component: {fileID: 1625477633}
   - component: {fileID: 1625477635}
   - component: {fileID: 1625477634}
-  - component: {fileID: 1625477636}
   m_Layer: 5
-  m_Name: Clyaksa
-  m_TagString: SpriteClyaksa
+  m_Name: YellowBlob
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1489,7 +1537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184, y: 21}
+  m_AnchoredPosition: {x: 0, y: 0.89596}
   m_SizeDelta: {x: 608.0871, y: 531.5261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625477634
@@ -1512,7 +1560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2768a0c771b30024dbc659a4221cd27e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ecb8fd9b6e93194d9917a0e78623688, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1530,19 +1578,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625477632}
   m_CullTransparentMesh: 1
---- !u!114 &1625477636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625477632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d064d053682f5bb43a6198d655187073, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clyaksa: {fileID: 1625477634}
 --- !u!1 &1646685574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1770,82 @@ Transform:
   m_Father: {fileID: 1646685575}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1782554403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782554406}
+  - component: {fileID: 1782554405}
+  - component: {fileID: 1782554404}
+  m_Layer: 5
+  m_Name: BlueBlob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1782554404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782554403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c6e68fe97c753bf46b5b7c01e134e634, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1782554405
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782554403}
+  m_CullTransparentMesh: 1
+--- !u!224 &1782554406
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782554403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1280220717}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.89596}
+  m_SizeDelta: {x: 608.0871, y: 531.5261}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1877746517
 GameObject:
   m_ObjectHideFlags: 0

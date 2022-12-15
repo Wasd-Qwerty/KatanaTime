@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class SpriteClyaksa : MonoBehaviour
 {
-    [SerializeField] private Image _clyaksa;
+    [SerializeField] private Image[] _blots;
     private bool clyaksaOnScreen;
 
     
@@ -21,18 +22,21 @@ public class SpriteClyaksa : MonoBehaviour
 
     private IEnumerator Clyaksa()
     {
+        Random rand = new Random();
+        var blob = _blots[rand.Next(0, _blots.Length)];
+        
         clyaksaOnScreen = true;
-        _clyaksa.color = new Color(255, 255, 255, 0.7f);
-        var cacheA = _clyaksa.color.a;
-        while (_clyaksa.color.a > 0)
+        blob.color = new Color(255, 255, 255, 0.7f);
+        var cacheA = blob.color.a;
+        while (blob.color.a > 0)
         {
             yield return new WaitForSeconds(0.1f);
             cacheA -= 0.05f;
-            print(_clyaksa.color);
-            _clyaksa.color = new Color(255, 255, 255, cacheA);
+            print(blob.color);
+            blob.color = new Color(255, 255, 255, cacheA);
         }
 
-        _clyaksa.color = new Color(255, 255, 255, 0);
+        blob.color = new Color(255, 255, 255, 0);
         clyaksaOnScreen = false;
     }
 }
