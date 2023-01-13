@@ -8,13 +8,13 @@ using Random = System.Random;
 public class SpriteClyaksa : MonoBehaviour
 {
     [SerializeField] private Image[] _blots;
-    private bool clyaksaOnScreen;
+    private bool _clyaksaOnScreen;
 
     
     
     public void Sprite()
     {
-        if (!clyaksaOnScreen)
+        if (!_clyaksaOnScreen)
         {
             StartCoroutine(Clyaksa());
         }
@@ -25,7 +25,7 @@ public class SpriteClyaksa : MonoBehaviour
         Random rand = new Random();
         var blob = _blots[rand.Next(0, _blots.Length)];
         
-        clyaksaOnScreen = true;
+        _clyaksaOnScreen = true;
         blob.color = new Color(255, 255, 255, 0.7f);
         var cacheA = blob.color.a;
         while (blob.color.a > 0)
@@ -37,6 +37,6 @@ public class SpriteClyaksa : MonoBehaviour
         }
 
         blob.color = new Color(255, 255, 255, 0);
-        clyaksaOnScreen = false;
+        _clyaksaOnScreen = false;
     }
 }
