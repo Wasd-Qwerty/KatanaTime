@@ -34,7 +34,7 @@ public class Slicer : MonoBehaviour
     {
         _bounds = _collider.bounds;
         /*var colliders = Physics.OverlapBox(bounds.center, bounds.extents, _collider.transform.rotation, _slicablesMask, QueryTriggerInteraction.Collide);*/
-        var hits = Physics.BoxCastAll(_bounds.center - new Vector3(0, 0.1f, 0.1f), _extents,
+        var hits = Physics.BoxCastAll(_bounds.center - transform.up * 0.01f, _extents,
             (_bounds.center - _startPoint.position),
             _collider.transform.rotation, _bladeLength, _slicablesMask, QueryTriggerInteraction.Collide);
 
@@ -47,7 +47,10 @@ public class Slicer : MonoBehaviour
         {
             var slicable = hit.collider.GetComponent<SlicableItem>();
             slicable.Slice(explosionPosition.position);
-            _scoreManager.IncreaseScore();
+            if (slicable.isFruit)
+            {
+                _scoreManager.IncreaseScore();
+            }
         }
     }
 
@@ -56,7 +59,7 @@ public class Slicer : MonoBehaviour
         // Debug.Log(_bounds.size.x / _extents.x + " : "  + _bounds.size.y / _extents.y + " : " + _bounds.size.z / _extents.z);
         // _debugPoint.position = _bounds.center;
         Debug.DrawRay(_startPoint.position, _bounds.center - _startPoint.position, Color.blue);
-        ExtDebug.DrawBox(_bounds.center - new Vector3(0, 0.01f, 0.01f), _extents, _collider.transform.rotation,
+        ExtDebug.DrawBox(_bounds.center - transform.up * 0.01f, _extents, _collider.transform.rotation,
             Color.blue);
     }
 }

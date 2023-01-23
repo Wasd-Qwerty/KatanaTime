@@ -84,6 +84,7 @@ MonoBehaviour:
   _explosionRadius: 5
   _explosionUpwardsModifier: 0
   _explosionForceMode: 2
+  isFruit: 1
 --- !u!54 &97192785220077109
 Rigidbody:
   m_ObjectHideFlags: 0

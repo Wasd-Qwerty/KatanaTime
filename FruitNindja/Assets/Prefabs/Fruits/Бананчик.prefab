@@ -231,6 +231,10 @@ MonoBehaviour:
   _explosionRadius: 5
   _explosionUpwardsModifier: 0
   _explosionForceMode: 2
+  MyUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  isFruit: 1
 --- !u!54 &1584684601
 Rigidbody:
   m_ObjectHideFlags: 0

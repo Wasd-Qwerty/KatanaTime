@@ -8,6 +8,8 @@ TagManager:
   - bananaSpeed
   - clyaksa
   - SpriteClyaksa
+  - RoomLight
+  - SamplesInfoPanel
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - 
   - Slicable
-  - 
+  - Grabbable
   - 
   - 
   - 
