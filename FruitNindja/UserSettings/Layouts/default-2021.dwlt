@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 59
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 634
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 634
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 13}
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -563,9 +563,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.190824, y: -0.2775306, z: 16.898188}
+    m_Target: {x: 2.4204187, y: -0.8132261, z: -17.640768}
     speed: 2
-    m_Value: {x: 12.190824, y: -0.2775306, z: 16.898188}
+    m_Value: {x: 2.4204187, y: -0.8132261, z: -17.640768}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,13 +612,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.022862911, y: -0.33831736, z: 0.008239669, w: -0.9405951}
+    m_Target: {x: 0.003682622, y: 0.996023, z: -0.05804928, w: 0.063799426}
     speed: 2
-    m_Value: {x: -0.02286556, y: -0.33835655, z: 0.008240623, w: -0.94070405}
+    m_Value: {x: 0.0036835144, y: 0.9962644, z: -0.058063347, w: 0.063814886}
   m_Size:
-    m_Target: 9.959541
+    m_Target: 10.123226
     speed: 2
-    m_Value: 9.959541
+    m_Value: 10.123226
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -676,7 +676,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fe79feffe2c3feff04c9feff5833ffffac33ffffae33fffffc3affff944cffffb64cffffd84cfffff04cfffff24cffff048cffff9a8fffff5694ffff0497ffffa89affffcc9fffff10a0ffffc0a2ffffa4acffff78efffffeaf3ffff66f4fffffef4ffff2afbffff2e70000012bc000082d30000a0d30000
+      m_ExpandedIDs: be5af7ffc05af7ffde5af7ffe85af7ff325cf7ffa89ef7ff50a5f7ffb8d7f7ff7018f8ff2841f8ff2c41f8ffbc41f8fffc42f8ff1a43f8ff2443f8ff6e44f8ff2e49f8fffe4bf8ff00dfffff54e0ffffa2faffffacfaffff2cfbfffffc8c0000b05f0100b85f01001260010040dd010052dd01006add01008cdd0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -833,22 +833,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Music
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Music
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\FruitNindja\FruitNindja
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1360}
-    m_SelectedIDs: 28730000
-    m_LastClickedID: 29480
-    m_ExpandedIDs: 0000000026730000287300002a7300002c7300002e73000030730000327300003473000036730000387300003a7300003c7300003e73000040730000427300004473000046730000e473000000ca9a3b
+    scrollPos: {x: 0, y: 32}
+    m_SelectedIDs: 10770000
+    m_LastClickedID: 30480
+    m_ExpandedIDs: 000000008a7500008c7500008e750000907500009275000094750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa7500004676000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -876,7 +876,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3a710000
     m_LastClickedID: 28986
-    m_ExpandedIDs: 0000000026730000287300002a7300002c7300002e73000030730000327300003473000036730000387300003a7300003c7300003e73000040730000427300004473000046730000
+    m_ExpandedIDs: 000000008a7500008c7500008e75000090750000927500009475000096750000987500009a7500009c7500009e750000a0750000a2750000a4750000a6750000a8750000aa750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
