@@ -44,6 +44,7 @@ public class Conductor : MonoBehaviour
             {
                 fruitInstantiate.Inst();
                 timingList.Remove(timing);
+                break;
             }
         }
     }
