@@ -2,10 +2,9 @@
 using EzySlice;
 public class SlicerMeshes : MonoBehaviour
 {
-    public Material materialAfterSlice;
     public LayerMask sliceMask;
     public bool isTouched;
-
+    public Material materialAfterSlice;
     private void Update()
     {
         if (isTouched == true)
@@ -16,9 +15,24 @@ public class SlicerMeshes : MonoBehaviour
             
             foreach (Collider objectToBeSliced in objectsToBeSliced)
             {
-                SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
-                GameObject upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
-                GameObject lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
+                GameObject upperHullGameobject, lowerHullGameobject;
+                Material sliceMaterial = null;
+                if (objectToBeSliced.gameObject.GetComponent<SlicableMaterial>() != null)
+                {
+                    sliceMaterial = objectToBeSliced.gameObject.GetComponent<SlicableMaterial>().sliceMaterial;
+                }
+                if (sliceMaterial != null)
+                {
+                    SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, sliceMaterial);
+                    upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, sliceMaterial);
+                    lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, sliceMaterial);
+                }
+                else
+                {
+                    SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
+                    upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
+                    lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
+                }
 
                 upperHullGameobject.transform.position = objectToBeSliced.transform.position;
                 lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
