@@ -33,7 +33,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\GitHub\FruitNindja\FruitNindja -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\GitHub\FruitNindja\FruitNindja" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -84,6 +84,7 @@
       <workItem from="1676460379195" duration="1368000" />
       <workItem from="1676547967930" duration="1190000" />
       <workItem from="1676552256268" duration="1857000" />
+      <workItem from="1676627544740" duration="1162000" />
     </task>
     <servers />
   </component>

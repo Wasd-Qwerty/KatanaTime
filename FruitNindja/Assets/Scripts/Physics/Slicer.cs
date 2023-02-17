@@ -43,15 +43,15 @@ public class Slicer : MonoBehaviour
             return;
         }
 
-        foreach (var hit in hits)
-        {
-            var slicable = hit.collider.GetComponent<SlicableItem>();
-            slicable.Slice(explosionPosition.position);
-            if (slicable.isFruit)
-            {
-                _scoreManager.IncreaseScore();
-            }
-        }
+        // foreach (var hit in hits)
+        // {
+        //     var slicable = hit.collider.GetComponent<SlicableMaterial>();
+        //     slicable.Slice(explosionPosition.position);
+        //     if (slicable.isFruit)
+        //     {
+        //         _scoreManager.IncreaseScore();
+        //     }
+        // }
     }
 
     private void DebugDraw()
