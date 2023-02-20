@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4a4cc684aa3ad4f8e9bc48c00a6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slicer: {fileID: 0}
+  slicer: {fileID: 2651839112685927518}
 --- !u!1 &8476621865327893285
 GameObject:
   m_ObjectHideFlags: 0
