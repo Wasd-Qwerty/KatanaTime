@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6834068809913893841}
   - component: {fileID: 7600007760107900020}
   - component: {fileID: 5664492056108693694}
+  - component: {fileID: 7184796949912214321}
   m_Layer: 0
   m_Name: RightHandPan
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7184796949912214321
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168996850185460075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8999911773206952699, guid: b867dc9d68f5cc24c956c279971202ec, type: 3}
