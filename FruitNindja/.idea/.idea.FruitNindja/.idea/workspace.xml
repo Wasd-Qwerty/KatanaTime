@@ -10,7 +10,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b2a272e51214e2f91bbc4fb4f28eff8159400/2f/78abefe7/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IlshatZaebal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -84,7 +83,8 @@
       <workItem from="1676460379195" duration="1368000" />
       <workItem from="1676547967930" duration="1190000" />
       <workItem from="1676552256268" duration="1857000" />
-      <workItem from="1676627544740" duration="4126000" />
+      <workItem from="1676627544740" duration="4594000" />
+      <workItem from="1676883439411" duration="1918000" />
     </task>
     <servers />
   </component>

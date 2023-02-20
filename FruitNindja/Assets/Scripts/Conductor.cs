@@ -21,7 +21,7 @@ public class Conductor : MonoBehaviour
 
     public List<float> timingList;
     
-    [SerializeField] private FruitInstantiate fruitInstantiate; 
+    [SerializeField] private ObjectInstantiate fruitInstantiate; 
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
@@ -42,7 +42,7 @@ public class Conductor : MonoBehaviour
         {
             if (Math.Abs(songPosition - deltaTime - timing) < 0.1f)
             {
-                fruitInstantiate.Inst();
+                // fruitInstantiate.Inst();
                 timingList.Remove(timing);
                 break;
             }
