@@ -250,7 +250,7 @@ MonoBehaviour:
   - {fileID: 401492610}
   trackTime: {fileID: 0}
   _forceMode: 1
-  _forceDirection: {x: 1, y: 0.15, z: 0}
+  _forceDirection: {x: 1, y: 0.2, z: 0}
   _force: 15
   _timeToDestroy: 4
   _timeToInst: 2.26

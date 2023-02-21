@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Slicer : MonoBehaviour
+public class OldSlicer : MonoBehaviour
 {
     [SerializeField] private BoxCollider _collider;
     [SerializeField] private LayerMask _slicablesMask;

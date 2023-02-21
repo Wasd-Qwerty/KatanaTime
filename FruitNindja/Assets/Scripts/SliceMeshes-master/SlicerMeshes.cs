@@ -23,9 +23,9 @@ public class SlicerMeshes : MonoBehaviour
                 }
                 if (sliceMaterial != null)
                 {
-                    SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, sliceMaterial);
-                    upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, sliceMaterial);
-                    lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, sliceMaterial);
+                    SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
+                    upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
+                    lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
                 }
                 else
                 {
@@ -39,7 +39,9 @@ public class SlicerMeshes : MonoBehaviour
 
                 MakeItPhysical(upperHullGameobject);
                 MakeItPhysical(lowerHullGameobject);
-
+                
+                Destroy(upperHullGameobject, 3f);
+                Destroy(lowerHullGameobject, 3f);
                 Destroy(objectToBeSliced.gameObject);
             }
         }
