@@ -6,6 +6,7 @@ using UnityEngine;
 public class SliceListener : MonoBehaviour
 {
     public SlicerMeshes slicer;
+
     
     private BoxCollider _boxCollider;
 
@@ -27,25 +28,19 @@ public class SliceListener : MonoBehaviour
     private void FixedUpdate()
     {
         DebugDraw();
+
         var direction = transform.up;
         _directionDebug.position = direction;
-        // Debug.Log("Direction: " + direction);
         var hits = Physics.BoxCastAll(_boxCollider.bounds.center, _extents, direction, _boxCollider.transform.rotation, maxDistance, layerMask, QueryTriggerInteraction.Ignore);
         foreach (var hit in hits)
         {
-            Debug.Log("Ok let`s go");
-            slicer.Touch();
+            if (transform.rotation.eulerAngles.y > 240 && transform.eulerAngles.y < 300)
+            {
+                slicer.Touch();             
+            }
         }
-        // try
-        // {
-        //     
-        // }
-        // catch (Exception e)
-        // {
-        //     Debug.Log(e.Message);
-        //     Debug.Break();
-        // }
     }
+
     private void DebugDraw()
     {
         ExtDebug.DrawBox(_boxCollider.bounds.center, _extents, _boxCollider.transform.rotation,

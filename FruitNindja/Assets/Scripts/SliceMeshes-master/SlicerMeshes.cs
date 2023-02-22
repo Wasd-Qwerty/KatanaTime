@@ -57,7 +57,6 @@ public class SlicerMeshes : MonoBehaviour
     public void Touch()
     {
         Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(1, 0.1f, 0.1f), transform.rotation, sliceMask);
-        if(objectsToBeSliced.Length != 0) Debug.Log(objectsToBeSliced.Length);
         foreach (Collider objectToBeSliced in objectsToBeSliced)
         {
            
