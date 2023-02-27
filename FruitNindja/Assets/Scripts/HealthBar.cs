@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     public int health;
-    public GameObject health_txt_gameObject;
-    public TextMesh health_txt;
+    public TextMeshProUGUI health_txt;
 
     public int damage;
     private void Start()
     {
         health_txt.text = health.ToString();
-        health_txt_gameObject.GetComponent<TextMesh>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        if(collision.gameObject.tag == "NFruit")
+        if (Input.GetKey(KeyCode.Space))
         {
             health = health - damage;
             health_txt.text = health.ToString();
