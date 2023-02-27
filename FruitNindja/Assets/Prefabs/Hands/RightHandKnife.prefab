@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 653605522}
   - component: {fileID: 653605523}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,6 @@ MonoBehaviour:
     m_Bits: 1024
   maxDistance: 0
   _extents: {x: 0.01, y: 0.26, z: 0.035}
-  _directionDebug: {fileID: 982869929}
 --- !u!54 &1181137472
 Rigidbody:
   m_ObjectHideFlags: 0
