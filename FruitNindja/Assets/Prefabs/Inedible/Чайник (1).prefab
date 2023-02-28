@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 3655875398345456118}
   - component: {fileID: 365808460693468755}
   - component: {fileID: 2519600794322829977}
-  m_Layer: 0
+  - component: {fileID: -94236463682098437}
+  - component: {fileID: 8526782053547184894}
+  m_Layer: 11
   m_Name: "\u0427\u0430\u0439\u043D\u0438\u043A (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,3 +87,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &-94236463682098437
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176974178605867852}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &8526782053547184894
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176974178605867852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35162282
+  m_Center: {x: -0.0016995445, y: -0.02318734, z: -0.18722773}

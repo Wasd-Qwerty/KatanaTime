@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     public void IncreaseScore(double editNumber)
     {
+       
         var cacheScore = Convert.ToDouble(_scoreText.text);
         _scoreText.text = Convert.ToString(cacheScore + editNumber, CultureInfo.InvariantCulture);
     }
@@ -21,9 +22,8 @@ public class ScoreManager : MonoBehaviour
         if (cacheScore - editNumber >= 0)
         {
             _scoreText.text = Convert.ToString(cacheScore - editNumber, CultureInfo.InvariantCulture);
-            
+
         }
     }
 
-    
 }

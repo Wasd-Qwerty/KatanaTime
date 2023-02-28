@@ -43,7 +43,7 @@ public class ObjectInstantiate : MonoBehaviour
         return null;
     }
 
-    public void RandomizeNextHand()
+    public void RandomizeNextPosition()
     {
         var randomIndexPos = Random.Range(0, _objectSpawnPos.Length);
 

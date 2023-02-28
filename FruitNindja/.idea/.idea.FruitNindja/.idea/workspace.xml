@@ -10,7 +10,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b2a272e51214e2f91bbc4fb4f28eff8159400/2f/78abefe7/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Batting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RGBUltra.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -90,8 +89,8 @@
       <workItem from="1676967332707" duration="2191000" />
       <workItem from="1677055236644" duration="16580000" />
       <workItem from="1677139108264" duration="6897000" />
-      <workItem from="1677490229897" duration="5453000" />
-      <workItem from="1677573104068" duration="8113000" />
+      <workItem from="1677490229897" duration="3412000" />
+      <workItem from="1677586957188" duration="1129000" />
     </task>
     <servers />
   </component>

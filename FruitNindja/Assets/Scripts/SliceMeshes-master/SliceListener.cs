@@ -14,12 +14,7 @@ public class SliceListener : MonoBehaviour
     public LayerMask layerMask;
     public float maxDistance = 1;
     [SerializeField] private Vector3 _extents = new Vector3(0.1f, 1f, 0.1f);
-    //[SerializeField] private Transform _directionDebug;
-    
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     slicer.Touch();
-    // }
+   
     private void Start()
     {
         _boxCollider = GetComponent<BoxCollider>();
@@ -30,13 +25,12 @@ public class SliceListener : MonoBehaviour
         DebugDraw();
 
         var direction = transform.up;
-        //_directionDebug.position = direction;
         var hits = Physics.BoxCastAll(_boxCollider.bounds.center, _extents, direction, _boxCollider.transform.rotation, maxDistance, layerMask, QueryTriggerInteraction.Ignore);
         foreach (var hit in hits)
         {
             if (transform.rotation.eulerAngles.y > 240 && transform.eulerAngles.y < 300)
             {
-                 slicer.Touch();             
+                slicer.Touch();             
             }
         }
     }
