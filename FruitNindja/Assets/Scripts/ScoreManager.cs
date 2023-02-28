@@ -1,29 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private Text _scoreText;
+    [SerializeField] private Text _numberOfElementsCut;
 
-    public void IncreaseScore(double editNumber)
+    public void IncreaseScore()
     {
-        var cacheScore = Convert.ToDouble(_scoreText.text);
-        _scoreText.text = Convert.ToString(cacheScore + editNumber, CultureInfo.InvariantCulture);
+        var cacheCount = Convert.ToInt32(_numberOfElementsCut.text); 
+        _numberOfElementsCut.text = Convert.ToString(cacheCount + 1);
     }
-
-    public void DecreaseScore(double editNumber)
-    {
-        var cacheScore = Convert.ToDouble(_scoreText.text);
-        if (cacheScore - editNumber >= 0)
-        {
-            _scoreText.text = Convert.ToString(cacheScore - editNumber, CultureInfo.InvariantCulture);
-            
-        }
-    }
-
-    
 }

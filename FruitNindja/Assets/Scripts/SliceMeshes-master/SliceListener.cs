@@ -36,7 +36,7 @@ public class SliceListener : MonoBehaviour
         {
             if (transform.rotation.eulerAngles.y > 240 && transform.eulerAngles.y < 300)
             {
-                 slicer.Touch();             
+                slicer.Touch();             
             }
         }
     }
