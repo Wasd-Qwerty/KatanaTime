@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 583900184938603753}
   - component: {fileID: 4590775002261089100}
   - component: {fileID: 1752255136644931462}
-  m_Layer: 0
+  - component: {fileID: 3131434321005230250}
+  - component: {fileID: 7967212190817512893}
+  m_Layer: 11
   m_Name: Toaster.B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,3 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3131434321005230250
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239181933269794387}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7967212190817512893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239181933269794387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34765413, y: 0.22895882, z: 0.20753779}
+  m_Center: {x: 0, y: 0.11405328, z: 0.0052984953}

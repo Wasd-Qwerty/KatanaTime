@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4853123368743636560}
   - component: {fileID: 4939077926930828112}
   - component: {fileID: 7165181365111996314}
-  - component: {fileID: 4562835554308749883}
   - component: {fileID: 379231044254565056}
+  - component: {fileID: 1423253517478613013}
+  - component: {fileID: 196477110233249891}
   m_Layer: 0
   m_Name: LeftHandPan
   m_TagString: Untagged
@@ -87,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4562835554308749883
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678201242625777231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8314571269056883277, guid: f64f26aeb6ad2ed4787997f61ff40989, type: 3}
 --- !u!54 &379231044254565056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,6 +104,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1423253517478613013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678201242625777231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6065923, y: 0.5609827, z: 0.35997447}
+  m_Center: {x: -0.005524695, y: 0.3905205, z: 0.18657005}
+--- !u!114 &196477110233249891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678201242625777231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bfb0583255b1c4d9456f6583308328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useIt: 0
+  _scoreManager: {fileID: 0}
+  decreaseNumber: 50
+  _forceTransform: {fileID: 0}
+  _forceMode: 1
+  _force: 10
+  edibleLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  inedibleLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1001 &379231044490483628
 PrefabInstance:
   m_ObjectHideFlags: 0
