@@ -7,20 +7,23 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public int health;
-    public TextMeshProUGUI health_txt;
+    public TextMeshProUGUI health_txt_right;
+    public TextMeshProUGUI health_txt_left;
 
     public int damage;
     private void Start()
     {
-        health_txt.text = health.ToString();
+        health_txt_right.text = health.ToString();
+        health_txt_left.text = health.ToString();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             health = health - damage;
-            health_txt.text = health.ToString();
+            health_txt_right.text = health.ToString();
+            health_txt_left.text = health.ToString();
         }
     }
 }
