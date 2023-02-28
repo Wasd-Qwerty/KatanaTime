@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8531988137410840114}
   - component: {fileID: 4740159094125971863}
   - component: {fileID: 7362429764858527069}
-  - component: {fileID: -5039177913673418500}
+  - component: {fileID: 7258022867093981021}
   m_Layer: 0
   m_Name: LeftHandPan
   m_TagString: Untagged
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-5039177913673418500
-MeshCollider:
+--- !u!65 &7258022867093981021
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,7 +95,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8314571269056883277, guid: f64f26aeb6ad2ed4787997f61ff40989, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.6065924, y: 0.5753467, z: 0.1268091}
+  m_Center: {x: -0.0055247033, y: 0.39562678, z: 0.08258401}

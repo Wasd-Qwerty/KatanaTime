@@ -4,8 +4,8 @@ using UnityEngine;
 public class FruitForce : MonoBehaviour
 {
     private Rigidbody _rb;
-    [SerializeField] private ForceMode _forceMode;
     [SerializeField] private Vector3 _forceDirection;
+    [SerializeField] private ForceMode _forceMode;
     [SerializeField] private float _force;
     [SerializeField] private float _timeToDestroy = 4f;
     
