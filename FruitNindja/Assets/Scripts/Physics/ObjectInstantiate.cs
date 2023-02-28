@@ -43,9 +43,8 @@ public class ObjectInstantiate : MonoBehaviour
         return null;
     }
 
-    public void RandomizeNextPosition()
+    public void RandomizeNextHand()
     {
-        Debug.Log("Думаю какой рукой кинуть");
         var randomIndexPos = Random.Range(0, _objectSpawnPos.Length);
 
         if (randomIndexPos == 0)
