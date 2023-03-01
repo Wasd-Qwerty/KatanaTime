@@ -8,7 +8,6 @@ public class Changing_Hands : MonoBehaviour
     [SerializeField] GameObject left_hand_pan;
     [SerializeField] GameObject right_hand_knife;
     [SerializeField] GameObject right_hand_pan;
-    bool isPressed;
     private void Update()
     {             
         Changing();
