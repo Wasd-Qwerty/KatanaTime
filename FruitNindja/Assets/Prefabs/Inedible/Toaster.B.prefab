@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1752255136644931462}
   - component: {fileID: 3131434321005230250}
   - component: {fileID: 7967212190817512893}
+  - component: {fileID: -7342816121875559867}
   m_Layer: 11
   m_Name: Toaster.B
   m_TagString: Untagged
@@ -114,3 +115,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.34765413, y: 0.22895882, z: 0.20753779}
   m_Center: {x: 0, y: 0.11405328, z: 0.0052984953}
+--- !u!114 &-7342816121875559867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239181933269794387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a54ceba9e88b3747a743ecbcdd45b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -16,14 +16,13 @@ public class HealthBar : MonoBehaviour
         health_txt_right.text = health.ToString();
         health_txt_left.text = health.ToString();
     }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) Damage();
-    }
     public void Damage()
     {
         health = health - damage;
+        if (health < 1)
+        {
+            health = 0;
+        }
         health_txt_right.text = health.ToString();
         health_txt_left.text = health.ToString();
     }
