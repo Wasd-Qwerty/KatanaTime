@@ -10,6 +10,8 @@ public class HealthBar : MonoBehaviour
     public TextMeshProUGUI health_txt_right;
     public TextMeshProUGUI health_txt_left;
 
+    [SerializeField] private Animator _cookAnimator;
+    
     public int damage;
     private void Start()
     {
@@ -18,10 +20,13 @@ public class HealthBar : MonoBehaviour
     }
     public void Damage()
     {
-        health = health - damage;
-        if (health < 1)
+        if (health > 0)
         {
-            health = 0;
+            health -= damage;
+            if (health == 0)
+            {
+                _cookAnimator.SetTrigger("gameOver");
+            }
         }
         health_txt_right.text = health.ToString();
         health_txt_left.text = health.ToString();

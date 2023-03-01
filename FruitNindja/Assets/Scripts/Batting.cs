@@ -21,7 +21,7 @@ public class Batting : MonoBehaviour
         if ((edibleLayer & (1 << collision.gameObject.layer)) != 0 && useIt)
         {
             _scoreManager.DecreaseScore(decreaseNumber);
-            collision.gameObject.GetComponent<Rigidbody>().AddForce((_forceTransform.position - transform.position) * _force, _forceMode);
         }
+        collision.gameObject.GetComponent<Rigidbody>().AddForce((_forceTransform.position - transform.position) * _force, _forceMode);
     }
 }
