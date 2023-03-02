@@ -17,27 +17,34 @@ public class SlicerMeshes : MonoBehaviour
         Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(1, 0.1f, 0.1f), transform.rotation, sliceMask);
         foreach (Collider objectToBeSliced in objectsToBeSliced)
         {
-            var parrentVelocity = objectToBeSliced.gameObject.GetComponent<Rigidbody>().velocity;
+            try
+            {
+                var parrentVelocity = objectToBeSliced.gameObject.GetComponent<Rigidbody>().velocity;
             
-            SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
-            upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
-            lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
+                SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
+                upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
+                lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
 
-            upperHullGameobject.transform.position = objectToBeSliced.transform.position;
-            lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
+                upperHullGameobject.transform.position = objectToBeSliced.transform.position;
+                lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
 
-            MakeItPhysical(upperHullGameobject);
-            MakeItPhysical(lowerHullGameobject);
+                MakeItPhysical(upperHullGameobject);
+                MakeItPhysical(lowerHullGameobject);
               
-            upperHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
-            lowerHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
+                upperHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
+                lowerHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
 
-            Destroy(upperHullGameobject, _timeToDestroy);
-            Destroy(lowerHullGameobject, _timeToDestroy);
+                Destroy(upperHullGameobject, _timeToDestroy);
+                Destroy(lowerHullGameobject, _timeToDestroy);
             
-            Destroy(objectToBeSliced.gameObject);
+                Destroy(objectToBeSliced.gameObject);
             
-            _scoreManager.IncreaseScore(100);
+                _scoreManager.IncreaseScore(100);
+            }
+            catch (Exception e)
+            {
+                // ignored
+            }
         }
     }
     private void MakeItPhysical(GameObject obj)

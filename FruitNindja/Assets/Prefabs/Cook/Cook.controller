@@ -28,7 +28,7 @@ AnimatorStateTransition:
 --- !u!1102 &-8604107053538967752
 AnimatorState:
   serializedVersion: 6
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -175,7 +175,7 @@ AnimatorStateMachine:
     m_Position: {x: 170, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4076654227218724672}
-    m_Position: {x: -30, y: 470, z: 0}
+    m_Position: {x: -10, y: 460, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
