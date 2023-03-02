@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8366290690411629306}
   - component: {fileID: 3125163550592044910}
   - component: {fileID: 8183082705961903687}
+  - component: {fileID: -3546356735036045938}
   m_Layer: 10
   m_Name: "\u0430\u0440\u0431\u0443\u0437"
   m_TagString: Untagged
@@ -148,3 +149,21 @@ MonoBehaviour:
   _stove: {fileID: 0}
   _forceTransform: {fileID: 0}
   _isBatting: 0
+--- !u!114 &-3546356735036045938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6306861038419511040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.11151922, g: 1, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
