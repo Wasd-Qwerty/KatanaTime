@@ -38,20 +38,23 @@ public class Batting : MonoBehaviour
     {
         while (true)
         {
-            var position = _object.transform.position;
-            var targetPosition = _forceTransform.position;
-            
-            position = Vector3.MoveTowards(position, targetPosition, 0.4f);
-            _object.transform.position = position;
-            
-            if (Vector3.Distance(_object.transform.position, targetPosition) < _mindistance)
+            if (_object != null) 
             {
-                // долетел
+                var position = _object.transform.position;
+                var targetPosition = _forceTransform.position;
+            
+                position = Vector3.MoveTowards(position, targetPosition, 0.4f);
+                _object.transform.position = position;
+            
+                if (Vector3.Distance(_object.transform.position, targetPosition) < _mindistance)
+                {
+                    // долетел
                 
-                Destroy(_object);
-                break;
+                    Destroy(_object);
+                    break;
+                }
+                yield return new WaitForSeconds(1/60f);
             }
-            yield return new WaitForSeconds(1/60f);
         }
     }
 }
