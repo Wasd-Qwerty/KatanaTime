@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 1864383316934653483}
   - component: {fileID: 1945767298582329274}
   - component: {fileID: 7123968457137022287}
+  - component: {fileID: -1096552407624575755}
   m_Layer: 10
   m_Name: "\u0413\u043E\u043B\u0443\u0431\u043A\u0430"
   m_TagString: Untagged
@@ -180,6 +181,7 @@ MonoBehaviour:
   _forceMode: 1
   _forceDirection: {x: 0, y: 0.5, z: 2}
   _force: 10
+  _timeToDestroy: 4
 --- !u!114 &1945767298582329274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,17 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583d080e1979c884f91f460809cbb2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parts:
-  - {fileID: 8418756236055076378}
-  - {fileID: 3279922757750562242}
-  _explosionForce: 5
-  _explosionRadius: 5
-  _explosionUpwardsModifier: 0
-  _explosionForceMode: 2
-  MyUnityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  isFruit: 1
+  sliceMaterial: {fileID: 0}
 --- !u!54 &7123968457137022287
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -219,6 +211,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1096552407624575755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157664381755449726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e38fbe81c0ce964d982498ca00f1bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angleX: 0
+  angleY: 0
+  angleZ: 0
 --- !u!1 &2569527016807270173
 GameObject:
   m_ObjectHideFlags: 0

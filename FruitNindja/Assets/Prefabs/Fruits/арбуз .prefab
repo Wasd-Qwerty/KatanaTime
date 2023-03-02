@@ -240,9 +240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 667067121025129002}
   - component: {fileID: 7157762017374835725}
-  - component: {fileID: 2746791143235554270}
-  - component: {fileID: 1510503142835869045}
   - component: {fileID: 3379050425569001996}
+  - component: {fileID: 1687940155436337650}
   m_Layer: 10
   m_Name: "\u0430\u0440\u0431\u0443\u0437 "
   m_TagString: Untagged
@@ -281,44 +280,6 @@ CapsuleCollider:
   m_Height: 2.8029451
   m_Direction: 2
   m_Center: {x: 0.0040870905, y: 0.004101932, z: 0.0014932156}
---- !u!114 &2746791143235554270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621674973323674971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbcf9e00c79446499b3b8d71a0b546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _forceMode: 1
-  _forceDirection: {x: 0, y: 0.5, z: 2}
-  _force: 10
---- !u!114 &1510503142835869045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8621674973323674971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 583d080e1979c884f91f460809cbb2f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parts:
-  - {fileID: 4862151983293350548}
-  - {fileID: 5769095418195044143}
-  _explosionForce: 5
-  _explosionRadius: 5
-  _explosionUpwardsModifier: 0
-  _explosionForceMode: 2
-  MyUnityEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  isFruit: 1
 --- !u!54 &3379050425569001996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -335,3 +296,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1687940155436337650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621674973323674971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e38fbe81c0ce964d982498ca00f1bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angleX: 0
+  angleY: 0
+  angleZ: 0
