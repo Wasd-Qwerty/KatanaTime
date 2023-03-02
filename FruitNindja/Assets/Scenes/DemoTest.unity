@@ -469,9 +469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreManager: {fileID: 393395221}
   decreaseNumber: 50
+  _stove: {fileID: 1179899364}
   _forceTransform: {fileID: 16073577}
-  _forceMode: 1
-  _force: 10
   edibleLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -1057,9 +1056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec6fbe1c2f4cfe4a8875b55c463b1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7
+  health: 3
   health_txt_right: {fileID: 728244192}
   health_txt_left: {fileID: 46474245}
+  _trackTime: {fileID: 393395226}
   _cookAnimator: {fileID: 1999751369}
   damage: 1
 --- !u!65 &661186940
@@ -1090,6 +1090,10 @@ PrefabInstance:
       propertyPath: _force
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 196477110233249891, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
+      propertyPath: _stove
+      value: 
+      objectReference: {fileID: 1179899364}
     - target: {fileID: 196477110233249891, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
       propertyPath: _scoreManager
       value: 
@@ -1710,6 +1714,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024398691}
   m_CullTransparentMesh: 1
+--- !u!95 &1179899364 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3989197576947380462, guid: 58e991b7b9ad95b4fb12cfce3855706c, type: 3}
+  m_PrefabInstance: {fileID: 3989197578390869665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1260704363
 GameObject:
   m_ObjectHideFlags: 0
