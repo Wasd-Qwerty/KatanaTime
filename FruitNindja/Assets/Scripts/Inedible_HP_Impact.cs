@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Inedible_HP_Impact : MonoBehaviour
 {
-    bool isHited = false;
-    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "OVRCameraRig" && isHited == false)
+        if (other.name == "OVRCameraRig")
         {
             GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
             Destroy(this);
@@ -18,7 +16,6 @@ public class Inedible_HP_Impact : MonoBehaviour
     {
         if (collision.gameObject.name == "LeftHandPan" || collision.gameObject.name == "RightHandPan")
         {
-            isHited = true;
             Destroy(this);
         }
 

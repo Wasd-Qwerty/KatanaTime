@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec6fbe1c2f4cfe4a8875b55c463b1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1000
   health_txt_right: {fileID: 1298723886}
   health_txt_left: {fileID: 1829819804}
   _trackTime: {fileID: 801645970}
