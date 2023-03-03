@@ -4567,8 +4567,6 @@ struct HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA  : public MonoBehavio
 // Inedible_HP_Impact
 struct Inedible_HP_Impact_t702199E545930A02A6063110DE57A7CBEF97A3DE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean Inedible_HP_Impact::isHited
-	bool ___isHited_4;
 };
 
 // LocalizedHaptics
@@ -4748,6 +4746,8 @@ struct ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39  : public MonoBeha
 {
 	// UnityEngine.UI.Text ScoreManager::_scoreText
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____scoreText_4;
+	// HealthBar ScoreManager::_healthBar
+	HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* ____healthBar_5;
 };
 
 // TMPro.Examples.ShaderPropAnimator
@@ -14291,8 +14291,8 @@ IL_00ca:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Batting__ctor_m471E20AED00704A5284CE4DDAAC8D51967D1909E (Batting_t81848295773A7DFA336303952C43081158771A10* __this, const RuntimeMethod* method) 
 {
 	{
-		// [SerializeField] private double decreaseNumber = 50;
-		__this->___decreaseNumber_5 = (50.0);
+		// [SerializeField] private double decreaseNumber = 100;
+		__this->___decreaseNumber_5 = (100.0);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -14665,7 +14665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Inedible_HP_Impact_OnTriggerEnter_m05FA8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (other.name == "OVRCameraRig" && isHited == false)
+		// if (other.name == "OVRCameraRig")
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_other;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -14674,31 +14674,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Inedible_HP_Impact_OnTriggerEnter_m05FA8
 		L_2 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_1, _stringLiteralA83365DE47F10CF708EE1858733DE1AA5560C7D5, NULL);
 		if (!L_2)
 		{
-			goto IL_0034;
-		}
-	}
-	{
-		bool L_3 = __this->___isHited_4;
-		if (L_3)
-		{
-			goto IL_0034;
+			goto IL_002c;
 		}
 	}
 	{
 		// GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
-		L_4 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralA83365DE47F10CF708EE1858733DE1AA5560C7D5, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralA83365DE47F10CF708EE1858733DE1AA5560C7D5, NULL);
+		NullCheck(L_3);
+		HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* L_4;
+		L_4 = GameObject_GetComponent_TisHealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA_mA2ABAD61A554C16F10736E226A126B7F3509EE3F(L_3, GameObject_GetComponent_TisHealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA_mA2ABAD61A554C16F10736E226A126B7F3509EE3F_RuntimeMethod_var);
 		NullCheck(L_4);
-		HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* L_5;
-		L_5 = GameObject_GetComponent_TisHealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA_mA2ABAD61A554C16F10736E226A126B7F3509EE3F(L_4, GameObject_GetComponent_TisHealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA_mA2ABAD61A554C16F10736E226A126B7F3509EE3F_RuntimeMethod_var);
-		NullCheck(L_5);
-		HealthBar_Damage_m5D22300BAD57735BFDA4BF3ABCFD5AA7EC46D4C4(L_5, NULL);
+		HealthBar_Damage_m5D22300BAD57735BFDA4BF3ABCFD5AA7EC46D4C4(L_4, NULL);
 		// Destroy(this);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(__this, NULL);
 	}
 
-IL_0034:
+IL_002c:
 	{
 		// }
 		return;
@@ -14747,20 +14740,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Inedible_HP_Impact_OnCollisionEnter_m612
 		L_7 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_6, _stringLiteral1FEB34205A113DD8821386C391A8D420F74A2173, NULL);
 		if (!L_7)
 		{
-			goto IL_003b;
+			goto IL_0034;
 		}
 	}
 
 IL_002e:
 	{
-		// isHited = true;
-		__this->___isHited_4 = (bool)1;
 		// Destroy(this);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(__this, NULL);
 	}
 
-IL_003b:
+IL_0034:
 	{
 		// if (collision.gameObject.name == "right_hand_with_knife" || collision.gameObject.name == "left_hand_with_knife")
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_8 = ___0_collision;
@@ -14774,7 +14765,7 @@ IL_003b:
 		L_11 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_10, _stringLiteralDEC44432F0AD386EB495C001075EC04622927DBE, NULL);
 		if (L_11)
 		{
-			goto IL_0069;
+			goto IL_0062;
 		}
 	}
 	{
@@ -14789,11 +14780,11 @@ IL_003b:
 		L_15 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_14, _stringLiteralC1FB43ECCEC42953EE3E4C47301A9DCD77A8DDB5, NULL);
 		if (!L_15)
 		{
-			goto IL_0083;
+			goto IL_007c;
 		}
 	}
 
-IL_0069:
+IL_0062:
 	{
 		// GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16;
@@ -14808,7 +14799,7 @@ IL_0069:
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(__this, NULL);
 	}
 
-IL_0083:
+IL_007c:
 	{
 		// }
 		return;
@@ -16732,7 +16723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_DecreaseScore_m8C8F8AFE3579
 		double L_4 = ___0_editNumber;
 		if ((!(((double)((double)il2cpp_codegen_subtract(L_3, L_4))) >= ((double)(0.0)))))
 		{
-			goto IL_0037;
+			goto IL_0038;
 		}
 	}
 	{
@@ -16748,10 +16739,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_DecreaseScore_m8C8F8AFE3579
 		L_9 = Convert_ToString_m7EBE84B1D453D12C9514AD3EF4F6B3F55A5E5C9B(((double)il2cpp_codegen_subtract(L_6, L_7)), L_8, NULL);
 		NullCheck(L_5);
 		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, L_9);
+		return;
 	}
 
-IL_0037:
+IL_0038:
 	{
+		// _healthBar.Damage();
+		HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* L_10 = __this->____healthBar_5;
+		NullCheck(L_10);
+		HealthBar_Damage_m5D22300BAD57735BFDA4BF3ABCFD5AA7EC46D4C4(L_10, NULL);
 		// }
 		return;
 	}

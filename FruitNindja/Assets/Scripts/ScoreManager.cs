@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private Text _scoreText;
-
+    [SerializeField] private HealthBar _healthBar;
     public void IncreaseScore(double editNumber)
     {
        
@@ -22,7 +22,10 @@ public class ScoreManager : MonoBehaviour
         if (cacheScore - editNumber >= 0)
         {
             _scoreText.text = Convert.ToString(cacheScore - editNumber, CultureInfo.InvariantCulture);
-
+        }
+        else
+        {
+            _healthBar.Damage();
         }
     }
 

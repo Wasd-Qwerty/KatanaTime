@@ -1102,6 +1102,8 @@ struct HandSkeleton_t1D460014EB9A79C22A05097791ABEE5855DAF34A;
 struct HandsActiveChecker_t6A81E0F5764685D2323A37325349986B1BC3283A;
 // OculusSampleFramework.HandsManager
 struct HandsManager_t0737DB8A771E2BC516413E349E0CDBBC8E5189C7;
+// HealthBar
+struct HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA;
 // Oculus.Interaction.Input.HmdDataAsset
 struct HmdDataAsset_tD78CD64BF92E02FF803F48F1CD8B1B6476167EED;
 // Oculus.Interaction.Input.HmdDataSourceConfig
@@ -18898,13 +18900,6 @@ struct IAPManager_t1BC52798D66C79698EA5E9DB930B62D0BF321060  : public MonoBehavi
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___m_priceText_5;
 };
 
-// Inedible_HP_Impact
-struct Inedible_HP_Impact_t702199E545930A02A6063110DE57A7CBEF97A3DE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// System.Boolean Inedible_HP_Impact::isHited
-	bool ___isHited_4;
-};
-
 // Oculus.Voice.Demo.UIShapesDemo.Instructions
 struct Instructions_tC62658EBAF6A7FAD2B89C78C0DB25D5ECC475DE8  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -20503,6 +20498,8 @@ struct ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39  : public MonoBeha
 {
 	// UnityEngine.UI.Text ScoreManager::_scoreText
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____scoreText_4;
+	// HealthBar ScoreManager::_healthBar
+	HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* ____healthBar_5;
 };
 
 // OculusSampleFramework.SelectionCylinder
@@ -29560,10 +29557,6 @@ struct HandsManager_t0737DB8A771E2BC516413E349E0CDBBC8E5189C7_StaticFields
 
 // Oculus.Platform.Samples.VrBoardGame.IAPManager
 
-// Inedible_HP_Impact
-
-// Inedible_HP_Impact
-
 // Oculus.Voice.Demo.UIShapesDemo.Instructions
 struct Instructions_tC62658EBAF6A7FAD2B89C78C0DB25D5ECC475DE8_StaticFields
 {
@@ -32216,9 +32209,6 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6798[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6799[6] = 
 {
 	static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ___health_4)),static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ___health_txt_right_5)),static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ___health_txt_left_6)),static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ____trackTime_7)),static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ____cookAnimator_8)),static_cast<int32_t>(offsetof(HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA, ___damage_9)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6800[1] = 
-{
-	static_cast<int32_t>(offsetof(Inedible_HP_Impact_t702199E545930A02A6063110DE57A7CBEF97A3DE, ___isHited_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6801[6] = 
 {
 	static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____gameOverUI_4)),static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____winUI_5)),static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____score_6)),static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____scoreText_7)),static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____winScore_8)),static_cast<int32_t>(offsetof(MenuManager_t34C8EA4F128D811DE986BE56D7938F2720BA7B16, ____changingHands_9)),};
@@ -32243,9 +32233,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6808[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6809[4] = 
 {
 	static_cast<int32_t>(offsetof(Rotation_Physics_tDBBE7ED3DFD4210538FBAD118BF41AE5647F0FAE, ___originRotation_4)),static_cast<int32_t>(offsetof(Rotation_Physics_tDBBE7ED3DFD4210538FBAD118BF41AE5647F0FAE, ___angleX_5)),static_cast<int32_t>(offsetof(Rotation_Physics_tDBBE7ED3DFD4210538FBAD118BF41AE5647F0FAE, ___angleY_6)),static_cast<int32_t>(offsetof(Rotation_Physics_tDBBE7ED3DFD4210538FBAD118BF41AE5647F0FAE, ___angleZ_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6810[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6810[2] = 
 {
-	static_cast<int32_t>(offsetof(ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39, ____scoreText_4)),};
+	static_cast<int32_t>(offsetof(ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39, ____scoreText_4)),static_cast<int32_t>(offsetof(ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39, ____healthBar_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6811[1] = 
 {
 	static_cast<int32_t>(offsetof(SlicableMaterial_t8D4DE32AF3EE70AF47EB54C97A0534E9B8BE0986, ___sliceMaterial_4)),};

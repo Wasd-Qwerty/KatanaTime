@@ -1456,6 +1456,8 @@ struct HandSkeleton_t1D460014EB9A79C22A05097791ABEE5855DAF34A;
 struct HandsActiveChecker_t6A81E0F5764685D2323A37325349986B1BC3283A;
 // OculusSampleFramework.HandsManager
 struct HandsManager_t0737DB8A771E2BC516413E349E0CDBBC8E5189C7;
+// HealthBar
+struct HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA;
 // Oculus.Interaction.Input.HmdDataAsset
 struct HmdDataAsset_tD78CD64BF92E02FF803F48F1CD8B1B6476167EED;
 // Oculus.Interaction.Input.HmdDataSourceConfig
@@ -30966,8 +30968,6 @@ struct IAPManager_t1BC52798D66C79698EA5E9DB930B62D0BF321060  : public MonoBehavi
 // Inedible_HP_Impact
 struct Inedible_HP_Impact_t702199E545930A02A6063110DE57A7CBEF97A3DE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// System.Boolean Inedible_HP_Impact::isHited
-	bool ___isHited_4;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.Inputs.InputActionManager
@@ -32609,6 +32609,8 @@ struct ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39  : public MonoBeha
 {
 	// UnityEngine.UI.Text ScoreManager::_scoreText
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____scoreText_4;
+	// HealthBar ScoreManager::_healthBar
+	HealthBar_t16FCB4D24034E750B0152144EC1371F4494A95FA* ____healthBar_5;
 };
 
 // OculusSampleFramework.SelectionCylinder
