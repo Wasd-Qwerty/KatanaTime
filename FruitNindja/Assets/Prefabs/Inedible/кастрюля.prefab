@@ -15,14 +15,7 @@ GameObject:
   - component: {fileID: 3459683829223725762}
   - component: {fileID: -4095409035709123449}
   - component: {fileID: 2968623013088505602}
-<<<<<<< HEAD
-<<<<<<< HEAD
   - component: {fileID: -4061545423024573505}
-  - component: {fileID: 925612992890488924}
-=======
->>>>>>> parent of 4715a31 (Доделано)
-=======
->>>>>>> parent of 4715a31 (Доделано)
   m_Layer: 11
   m_Name: "\u043A\u0430\u0441\u0442\u0440\u044E\u043B\u044F"
   m_TagString: Untagged
@@ -151,8 +144,6 @@ MonoBehaviour:
   angleX: 5
   angleY: 1
   angleZ: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!114 &-4061545423024573505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,25 +159,3 @@ MonoBehaviour:
   _stove: {fileID: 0}
   _forceTransform: {fileID: 0}
   _isBatting: 0
---- !u!114 &925612992890488924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810064675328840310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> parent of 4715a31 (Доделано)
-=======
->>>>>>> parent of 4715a31 (Доделано)
