@@ -120,7 +120,11 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 76
+=======
+  controlID: 27
+>>>>>>> parent of 4715a31 (Доделано)
 =======
   controlID: 27
 >>>>>>> parent of 4715a31 (Доделано)
@@ -149,7 +153,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 48
+=======
+  controlID: 28
+>>>>>>> parent of 4715a31 (Доделано)
 =======
   controlID: 28
 >>>>>>> parent of 4715a31 (Доделано)
@@ -173,12 +181,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1473
     height: 497
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 49
+=======
+    width: 1964
+    height: 834
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 29
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     width: 1964
     height: 834
@@ -205,8 +222,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 285
     height: 497
+=======
+    width: 380
+    height: 834
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     width: 380
     height: 834
@@ -236,12 +258,15 @@ MonoBehaviour:
     x: 380
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1188
     height: 497
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
 =======
+=======
+>>>>>>> parent of 4715a31 (Доделано)
     width: 1584
     height: 834
   m_MinSize: {x: 202, y: 221}
@@ -271,12 +296,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 497
     width: 1473
     height: 450
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
 =======
+=======
+>>>>>>> parent of 4715a31 (Доделано)
     y: 834
     width: 1964
     height: 473
@@ -466,8 +494,13 @@ MonoBehaviour:
     x: 0
     y: 73
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 284
     height: 476
+=======
+    width: 379
+    height: 813
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     width: 379
     height: 813
@@ -480,9 +513,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 6c6e0000
       m_LastClickedID: 28268
       m_ExpandedIDs: 2af8ffff78f9ffff7cf9ffff9cf9ffff2cfbffff326e00006c6e0000e06e000054710000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f603ffffb806ffff2208ffff
+>>>>>>> parent of 4715a31 (Доделано)
 =======
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -534,8 +573,13 @@ MonoBehaviour:
     x: 380
     y: 73
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1186
     height: 476
+=======
+    width: 1582
+    height: 813
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     width: 1582
     height: 813
@@ -775,9 +819,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -11.024408, y: -2.6861558, z: 25.177866}
     speed: 2
     m_Value: {x: -11.024408, y: -2.6861558, z: 25.177866}
+=======
+    m_Target: {x: -37.64185, y: 6.0087495, z: -74.35938}
+    speed: 2
+    m_Value: {x: -37.64185, y: 6.0087495, z: -74.35938}
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     m_Target: {x: -37.64185, y: 6.0087495, z: -74.35938}
     speed: 2
@@ -830,6 +880,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.094653554, y: 0.232289, z: -0.022741523, w: -0.96768886}
     speed: 2
     m_Value: {x: -0.09466036, y: 0.23230569, z: -0.022743156, w: -0.96775836}
@@ -837,6 +888,15 @@ MonoBehaviour:
     m_Target: 12.869136
     speed: 2
     m_Value: 12.869136
+=======
+    m_Target: {x: -0.0046749585, y: -0.97471243, z: -0.02046985, w: 0.22247261}
+    speed: 2
+    m_Value: {x: -0.0045213066, y: -0.97635394, z: -0.020504346, w: 0.21515617}
+  m_Size:
+    m_Target: 40.651848
+    speed: 2
+    m_Value: 40.651848
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     m_Target: {x: -0.0046749585, y: -0.97471243, z: -0.02046985, w: 0.22247261}
     speed: 2
@@ -891,15 +951,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 291
     y: 81
     width: 1176
     height: 583
 =======
+=======
+>>>>>>> parent of 4715a31 (Доделано)
     x: 380
     y: 73
     width: 1582
     height: 813
+<<<<<<< HEAD
+>>>>>>> parent of 4715a31 (Доделано)
+=======
 >>>>>>> parent of 4715a31 (Доделано)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -968,6 +1034,7 @@ MonoBehaviour:
       e11: 0.70857143
       e12: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       e13: -226.49533
       e20: 0
       e21: 0
@@ -985,6 +1052,9 @@ MonoBehaviour:
       e11: 0.85
       e12: 0
       e13: 269.9
+=======
+      e13: 0.8286133
+>>>>>>> parent of 4715a31 (Доделано)
 =======
       e13: 0.8286133
 >>>>>>> parent of 4715a31 (Доделано)
@@ -1034,9 +1104,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 570
     width: 1472
     height: 429
+=======
+    y: 907
+    width: 1963
+    height: 452
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     y: 907
     width: 1963
@@ -1072,15 +1148,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ba7b0000
     m_LastClickedID: 31674
     m_ExpandedIDs: 00000000827b0000847b0000867b0000887b00008a7b00008c7b00008e7b0000907b0000927b0000947b0000967b0000987b00009a7b00004691000000ca9a3b
 =======
+=======
+>>>>>>> parent of 4715a31 (Доделано)
     scrollPos: {x: 0, y: 64}
     m_SelectedIDs: e0860100
     m_LastClickedID: 100064
     m_ExpandedIDs: 00000000b0830100ba830100c0830100308e010000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of 4715a31 (Доделано)
+=======
 >>>>>>> parent of 4715a31 (Доделано)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1110,7 +1192,11 @@ MonoBehaviour:
     m_SelectedIDs: 6a740000
     m_LastClickedID: 29802
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000827b0000847b0000867b0000887b00008a7b00008c7b00008e7b0000907b0000927b0000947b0000967b0000987b00009a7b0000
+=======
+    m_ExpandedIDs: 
+>>>>>>> parent of 4715a31 (Доделано)
 =======
     m_ExpandedIDs: 
 >>>>>>> parent of 4715a31 (Доделано)
@@ -1144,6 +1230,9 @@ MonoBehaviour:
 =======
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
+>>>>>>> parent of 4715a31 (Доделано)
+=======
 >>>>>>> parent of 4715a31 (Доделано)
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f8750000acaa0000f0ac0000961e0100c0020100967b000000000000
@@ -1196,9 +1285,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 570
     width: 1472
     height: 429
+=======
+    y: 907
+    width: 1308
+    height: 452
+>>>>>>> parent of 4715a31 (Доделано)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
