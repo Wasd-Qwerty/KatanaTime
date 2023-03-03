@@ -30,7 +30,6 @@ public class SliceListener : MonoBehaviour
         var hits = Physics.BoxCastAll(_boxCollider.bounds.center, _extents, direction, _boxCollider.transform.rotation, maxDistance, layerMask, QueryTriggerInteraction.Ignore);
         foreach (var hit in hits)
         {
-            Debug.Log("x: " + transform.rotation.eulerAngles.x + " | y: " + transform.rotation.eulerAngles.y + " | z:" + transform.rotation.eulerAngles.z);
             if ((transform.rotation.eulerAngles.y > -_angularOfSlice && transform.eulerAngles.y < _angularOfSlice) || transform.rotation.eulerAngles.y - 360 > -_angularOfSlice && transform.eulerAngles.y - 360 < _angularOfSlice)
             {
                 slicer.Touch();          
