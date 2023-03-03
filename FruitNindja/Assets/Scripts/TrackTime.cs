@@ -10,16 +10,12 @@ public class TrackTime : MonoBehaviour
     [SerializeField] private MenuManager _menuManager;
     [SerializeField] private Animator _cookAnimator;
 
-    [SerializeField] private Text TimeText;
-
+    [SerializeField] private Text TimeText; 
     void Start()
     {
-        StartCoroutine("Track");
-    }
 
-    public void StopTrack()
-    {
-        StopCoroutine("Track");
+        StartCoroutine("Track");
+
     }
 
     private IEnumerator Track()
@@ -34,7 +30,6 @@ public class TrackTime : MonoBehaviour
                 _cookAnimator.SetTrigger("win");
                 break;
             }
-
             yield return new WaitForSeconds(1);
         }
     }

@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -7342816121875559867}
   - component: {fileID: -1870028080052474199}
   - component: {fileID: 9183952694932375949}
-  - component: {fileID: -1656334162661055928}
   m_Layer: 11
   m_Name: Toaster.B
   m_TagString: Untagged
@@ -163,18 +162,3 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &-1656334162661055928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239181933269794387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbca3e6c7e28aff4ea67d93b2a2a6c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stove: {fileID: 0}
-  _forceTransform: {fileID: 0}
-  _isBatting: 0

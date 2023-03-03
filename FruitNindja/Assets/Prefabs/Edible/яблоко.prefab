@@ -14,8 +14,11 @@ GameObject:
   - component: {fileID: -58551813695117164}
   - component: {fileID: -7347379615319322500}
   - component: {fileID: 7604615714632162083}
+<<<<<<< HEAD
   - component: {fileID: -4820241623003724216}
   - component: {fileID: -6254743358690992107}
+=======
+>>>>>>> parent of 4715a31 (Доделано)
   m_Layer: 10
   m_Name: "\u044F\u0431\u043B\u043E\u043A\u043E"
   m_TagString: Untagged
@@ -134,6 +137,7 @@ MonoBehaviour:
   angleX: 10
   angleY: 0
   angleZ: 0
+<<<<<<< HEAD
 --- !u!114 &-4820241623003724216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,3 +171,5 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+=======
+>>>>>>> parent of 4715a31 (Доделано)
