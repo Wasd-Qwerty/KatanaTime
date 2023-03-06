@@ -17,7 +17,6 @@ public class Batting : MonoBehaviour
         if ((edibleLayer & (1 << collision.gameObject.layer)) != 0)
         {
             _scoreManager.DecreaseScore(decreaseNumber);
-            
         }
 
         if ((edibleLayer & (1 << collision.gameObject.layer)) != 0 ||
