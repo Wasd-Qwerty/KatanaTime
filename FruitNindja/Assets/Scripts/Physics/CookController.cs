@@ -10,6 +10,8 @@ using Random = UnityEngine.Random;
 public class CookController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _objects;
+    [SerializeField] public List<GameObject> objectsOnScene;
+    
     [SerializeField] private Transform[] _objectSpawnPos;
 
     [SerializeField] private Animator _animator;
@@ -30,6 +32,18 @@ public class CookController : MonoBehaviour
         pos = _objectSpawnPos[0];
         _animator = GetComponent<Animator>();
         _leftHand = _animator.GetBool("LeftHand");
+    }
+
+    private void Update()
+    {
+        foreach (var obj in objectsOnScene)
+        {
+            if (obj == null)
+            {
+                objectsOnScene.Remove(obj);
+                break;
+            }
+        }
     }
 
     public void RandomizeNextPosition()
@@ -56,7 +70,7 @@ public class CookController : MonoBehaviour
 
         _rb = fruit.GetComponent<Rigidbody>();
         _rb.AddForce(_forceDirections[0] * _force, _forceMode);
-
+        objectsOnScene.Add(fruit);
         Destroy(fruit, _timeToDestroy);
     }
 
