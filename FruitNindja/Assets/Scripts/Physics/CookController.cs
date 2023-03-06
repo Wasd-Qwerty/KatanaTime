@@ -13,14 +13,14 @@ public class CookController : MonoBehaviour
     [SerializeField] private Transform[] _objectSpawnPos;
 
     [SerializeField] private Animator _animator;
-    private AnimationClip _throwAnimation;
 
     private Rigidbody _rb;
     [SerializeField] private ForceMode _forceMode;
-    [SerializeField] private Vector3 _forceDirection;
+    [SerializeField] private List<Vector3> _forceDirections;
     [SerializeField] private float _force;
     [SerializeField] private float _timeToDestroy = 4f;
-    
+
+    private bool _leftHand;
     private Transform pos;
     
     [SerializeField] private MenuManager _menuManager;
@@ -29,20 +29,7 @@ public class CookController : MonoBehaviour
     {
         pos = _objectSpawnPos[0];
         _animator = GetComponent<Animator>();
-        _throwAnimation = FindAnimation(_animator, "ThrowCook");
-    }
-
-    public AnimationClip FindAnimation (Animator animator, string name) 
-    {
-        foreach (AnimationClip clip in animator.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == name)
-            {
-                return clip;
-            }
-        }
-
-        return null;
+        _leftHand = _animator.GetBool("LeftHand");
     }
 
     public void RandomizeNextPosition()
@@ -68,7 +55,7 @@ public class CookController : MonoBehaviour
         var fruit = Instantiate(fruitPrefab, pos.position, Quaternion.identity);
 
         _rb = fruit.GetComponent<Rigidbody>();
-        _rb.AddForce(_forceDirection * _force, _forceMode);
+        _rb.AddForce(_forceDirections[0] * _force, _forceMode);
 
         Destroy(fruit, _timeToDestroy);
     }
