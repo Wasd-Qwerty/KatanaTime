@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using JetBrains.Annotations;
 using Oculus.Platform;
+using UnityEditor;
 using UnityEngine;
+using Application = UnityEngine.Application;
 using Random = UnityEngine.Random;
 
 public class CookController : MonoBehaviour
@@ -19,13 +22,15 @@ public class CookController : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField] private ForceMode _forceMode;
     [SerializeField] private List<Vector3> _forceDirections;
+    [SerializeField] private Vector3 _forceFridgeDirection;
     [SerializeField] private float _force;
     [SerializeField] private float _timeToDestroy = 4f;
 
     private bool _leftHand;
     private Transform pos;
     
-    [SerializeField] private MenuManager _menuManager;
+    [SerializeField] private GameObject _fridge;
+    [SerializeField] private GameObject _fridgePrefab;
     
     private void Start()
     {
@@ -74,8 +79,21 @@ public class CookController : MonoBehaviour
         Destroy(fruit, _timeToDestroy);
     }
 
-    public void ShowGameOver()
+    
+
+    public void ThrowTheFridge()
     {
-        _menuManager.ShowGameOverUI();
+        var localPosition = _fridge.transform.position;
+        var localRotation = _fridge.transform.rotation;
+        var scale = _fridge.transform.lossyScale;
+        
+        Destroy(_fridge);
+
+        var newFridge = Instantiate(_fridgePrefab, localPosition, localRotation);
+        newFridge.transform.localScale = scale;
+
+        var rb = newFridge.GetComponent<Rigidbody>();
+        rb.isKinematic = false;
+        rb.AddForce(_forceFridgeDirection * _force, _forceMode);
     }
 }

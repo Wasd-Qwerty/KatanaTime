@@ -9,6 +9,8 @@ TagManager:
   - SpriteClyaksa
   - RoomLight
   - SamplesInfoPanel
+  - MenuManager
+  - Fridge
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - 
   - Edible
   - Inedible
-  - 
+  - Player
   - 
   - 
   - 
