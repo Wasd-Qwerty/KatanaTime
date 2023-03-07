@@ -145,12 +145,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicer: {fileID: 1135018527}
+  _angularOfSlice: 45
   _startPoint: {fileID: 379199682}
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
   maxDistance: 0
-  _extents: {x: 0.01, y: 0.26, z: 0.035}
+  _extents: {x: 0.01, y: 0.27, z: 0.04}
 --- !u!54 &1181137472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -315,5 +316,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   _scoreManager: {fileID: 0}
-  _timeToDestroy: 0
+  _timeToDestroy: 3
   materialAfterSlice: {fileID: 2100000, guid: 7b4cda34e8d4b2d4e951fec3f657e953, type: 2}

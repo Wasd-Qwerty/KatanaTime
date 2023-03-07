@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 public class CookController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _objects;
-    [SerializeField] public List<GameObject> objectsOnScene;
+    public List<GameObject> objectsOnScene;
     
     [SerializeField] private Transform[] _objectSpawnPos;
 

@@ -145,12 +145,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicer: {fileID: 2651839112685927518}
+  _angularOfSlice: 45
   _startPoint: {fileID: 973902573}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  maxDistance: 1
-  _extents: {x: 0.01, y: 0.26, z: 0.035}
+    m_Bits: 1024
+  maxDistance: 0
+  _extents: {x: 0.01, y: 0.27, z: 0.04}
 --- !u!54 &1331463211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3236845693752248230
 Transform:
   m_ObjectHideFlags: 0
@@ -228,8 +229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8828568075133533055}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.6836, z: 0.2332}
-  m_LocalScale: {x: 0.05, y: 1, z: 0.15}
+  m_LocalPosition: {x: 0, y: 0.764, z: 0.064}
+  m_LocalScale: {x: 0.12, y: 0.01, z: 0.11}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3236845693752248230}
@@ -293,10 +294,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8828568075133533055}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &2651839112685927518
@@ -315,5 +316,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   _scoreManager: {fileID: 0}
-  _timeToDestroy: 0
-  materialAfterSlice: {fileID: 2100000, guid: 5277a21452cc608428767224207afaa9, type: 2}
+  _timeToDestroy: 3
+  materialAfterSlice: {fileID: 2100000, guid: 7b4cda34e8d4b2d4e951fec3f657e953, type: 2}

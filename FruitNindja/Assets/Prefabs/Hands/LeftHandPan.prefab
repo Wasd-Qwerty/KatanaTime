@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8678201242625777231}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -0.5678, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -115,8 +115,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6065923, y: 0.5609827, z: 0.35997447}
-  m_Center: {x: -0.005524695, y: 0.3905205, z: 0.18657005}
+  m_Size: {x: 0.6, y: 0.6, z: 0.15}
+  m_Center: {x: 0, y: 0.4, z: 0.09}
 --- !u!114 &196477110233249891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,12 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7bfb0583255b1c4d9456f6583308328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useIt: 0
   _scoreManager: {fileID: 0}
   decreaseNumber: 50
+  _stove: {fileID: 0}
   _forceTransform: {fileID: 0}
-  _forceMode: 1
-  _force: 10
   edibleLayer:
     serializedVersion: 2
     m_Bits: 1024
