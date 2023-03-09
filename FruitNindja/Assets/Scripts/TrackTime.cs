@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TrackTime : MonoBehaviour
 {
-    [SerializeField] private float _timeInSecond = 10;
+    [SerializeField] private float _timeInSecond = 120;
     [SerializeField] private MenuManager _menuManager;
     [SerializeField] private Animator _cookAnimator;
 
@@ -22,18 +22,6 @@ public class TrackTime : MonoBehaviour
     [SerializeField] private float _minScrollerScale;
     [SerializeField] private float _maxScrollerScale;
 
-    public float variable1 = 0;
-    public float variable2 = 0;
-
-    void Update()
-    {
-        // Calculate the value of variable2 based on the value of variable1
-        variable2 = (-0.008f * variable1) + 0.85f;
-
-        // Print the values of the variables for testing
-        Debug.Log("Variable1: " + variable1);
-        Debug.Log("Variable2: " + variable2);
-    }
 
     void Start()
     {
@@ -47,9 +35,17 @@ public class TrackTime : MonoBehaviour
 
     private IEnumerator Track()
     {
+        var maxTime = _timeInSecond;
         while (true)
         {
             _timeInSecond -= 1;
+            var posX = ((_minPointPos - _maxPointPos) * (_timeInSecond / maxTime)) + _maxPointPos;
+            
+            var pointPosition = _timePoint.transform.position;
+            pointPosition = new Vector3(posX, pointPosition.y, pointPosition.z);
+            _timePoint.transform.position = pointPosition;
+
+            Debug.Log(pointPosition + " " + _timePoint.transform.position);
             TimeText.text = Convert.ToString(_timeInSecond);
             if (_timeInSecond == 0)
             {
