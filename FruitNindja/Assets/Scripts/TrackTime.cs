@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; 
 
 public class TrackTime : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TrackTime : MonoBehaviour
     [SerializeField] private MenuManager _menuManager;
     [SerializeField] private Animator _cookAnimator;
 
-    [SerializeField] private Text TimeText;
+    [SerializeField] private TextMeshProUGUI timeText;
     
     [Header("Time Scroller")]
     
@@ -45,8 +46,15 @@ public class TrackTime : MonoBehaviour
             pointPosition = new Vector3(posX, pointPosition.y, pointPosition.z);
             _timePoint.transform.position = pointPosition;
 
-            Debug.Log(pointPosition + " " + _timePoint.transform.position);
-            TimeText.text = Convert.ToString(_timeInSecond);
+            
+            var scaleY = ((_minScrollerScale - _maxScrollerScale) * (_timeInSecond / maxTime)) + _maxScrollerScale;
+           
+            var localScale = _timeScroller.transform.localScale;
+            localScale = new Vector3(localScale.x, scaleY ,localScale.z);
+            _timeScroller.transform.localScale = localScale;
+
+            timeText.text = Convert.ToString(_timeInSecond);
+            
             if (_timeInSecond == 0)
             {
                 _menuManager.ShowWinUI();
