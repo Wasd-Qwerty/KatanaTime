@@ -1,13 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using JetBrains.Annotations;
-using Oculus.Platform;
-using UnityEditor;
 using UnityEngine;
-using Application = UnityEngine.Application;
 using Random = UnityEngine.Random;
 
 public class CookController : MonoBehaviour
