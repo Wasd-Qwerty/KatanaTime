@@ -9669,7 +9669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1895135382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10841,6 +10841,7 @@ GameObject:
   - component: {fileID: 1486415444989598218}
   - component: {fileID: 1486415444989598217}
   - component: {fileID: 1486415444989598216}
+  - component: {fileID: 1486415444989598220}
   m_Layer: 5
   m_Name: Screen
   m_TagString: Untagged
@@ -10931,6 +10932,24 @@ RectTransform:
   m_AnchoredPosition: {x: -0.592, y: 1.74259}
   m_SizeDelta: {x: 4.8042, y: 2.456}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1486415444989598220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486415444989598215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f50d719d9cc3744aaba95e3577d45c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1557311931267207331}
+  continueButton: {fileID: 1557311931261523721}
+  restartButton: {fileID: 1557311930922381668}
+  quitButton: {fileID: 1557311930279025122}
+  cookController: {fileID: 661231463}
+  indicator: {fileID: 589533494414158149}
 --- !u!1 &1557311930014135220
 GameObject:
   m_ObjectHideFlags: 0
@@ -11601,7 +11620,6 @@ GameObject:
   - component: {fileID: 1557311931267207330}
   - component: {fileID: 1557311931267207332}
   - component: {fileID: 1557311931267207333}
-  - component: {fileID: 1557311931267207334}
   m_Layer: 5
   m_Name: PauseScreen
   m_TagString: Untagged
@@ -11647,24 +11665,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 350
---- !u!114 &1557311931267207334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557311931267207331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f50d719d9cc3744aaba95e3577d45c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1557311931267207331}
-  continueButton: {fileID: 1557311931261523721}
-  restartButton: {fileID: 1557311930922381668}
-  quitButton: {fileID: 1557311930279025122}
-  cookController: {fileID: 661231463}
-  indicator: {fileID: 589533494414158149}
 --- !u!114 &1557311931493603632
 MonoBehaviour:
   m_ObjectHideFlags: 0
