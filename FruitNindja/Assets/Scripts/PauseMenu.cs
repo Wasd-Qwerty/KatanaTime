@@ -7,44 +7,105 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public Button resumeButton;
+    public Button continueButton;
     public Button restartButton;
     public Button quitButton;
+
+    [Space]
+    [SerializeField] CookController cookController;
+
+    [Space]
+    [SerializeField] GameObject indicator;
+    Material material;
+
 
     void Start()
     {
         pauseMenu.SetActive(false);
-        resumeButton.onClick.AddListener(Resume);
+        continueButton.onClick.AddListener(Continue);
         restartButton.onClick.AddListener(Restart);
         quitButton.onClick.AddListener(Quit);
+
+        Renderer renderer = indicator.GetComponent<Renderer>();
+        material = renderer.material;
+        
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu();
+            Pause();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Continue();
         }
     }
 
-    void TogglePauseMenu()
+    void Pause()
     {
-        bool isPaused = !pauseMenu.activeSelf;
-        pauseMenu.SetActive(isPaused);
+        pauseMenu.SetActive(true);
+        material.color = Color.green;
 
-        if (isPaused)
+        Time.timeScale = 0f;
+        try
         {
-            Time.timeScale = 0f;
+            foreach (var obj in cookController.objectsOnScene)
+            {
+                Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
+                if (rotation_Physics != null)
+                {
+                    rotation_Physics.enabled = false;
+                }
+            }
         }
-        else
+        catch
         {
-            Time.timeScale = 1f;
+            foreach (var obj in cookController.objectsOnScene)
+            {
+                if (obj != null)
+                {
+                    Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
+                    if (rotation_Physics != null)
+                    {
+                        rotation_Physics.enabled = false;
+                    }
+                }
+            }
         }
     }
 
-    void Resume()
+    void Continue()
     {
-        TogglePauseMenu();
+        pauseMenu.SetActive(false);
+        material.color = Color.red;
+        Time.timeScale = 1f;
+        try
+        {
+            foreach (var obj in cookController.objectsOnScene)
+            {
+                Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
+                if (rotation_Physics != null)
+                {
+                    rotation_Physics.enabled = true;
+                }
+            }
+        }
+        catch
+        {
+            foreach (var obj in cookController.objectsOnScene)
+            {
+                if (obj != null)
+                {
+                    Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
+                    if (rotation_Physics != null)
+                    {
+                        rotation_Physics.enabled = true;
+                    }
+                }
+            }
+        }
     }
 
     void Restart()
