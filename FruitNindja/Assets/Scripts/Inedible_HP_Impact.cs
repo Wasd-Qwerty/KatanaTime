@@ -23,6 +23,7 @@ public class Inedible_HP_Impact : MonoBehaviour
         {
             GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
             gameObject.layer = 0;
+            Destroy(GetComponent<BoxCollider>());
             Destroy(this);
         }
     }

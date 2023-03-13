@@ -4,8 +4,11 @@ using Random = UnityEngine.Random;
 
 public class CookController : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _objects;
+    [SerializeField] private List<GameObject> _objectsPrefabs;
     public List<GameObject> objectsOnScene;
+
+    private int kolvoEdible = 0;
+    private int kolvoInedible = 0;
     
     [SerializeField] private Transform[] _objectSpawnPos;
 
@@ -18,7 +21,9 @@ public class CookController : MonoBehaviour
     [SerializeField] private float _force;
     [SerializeField] private float _timeToDestroy = 4f;
 
-    private bool _leftHand;
+    public LayerMask edibleLayer;
+    public LayerMask inedibleLayer;
+    
     private Transform pos;
     
     [SerializeField] private GameObject _fridge;
@@ -28,7 +33,6 @@ public class CookController : MonoBehaviour
     {
         pos = _objectSpawnPos[0];
         _animator = GetComponent<Animator>();
-        _leftHand = _animator.GetBool("LeftHand");
     }
 
     private void Update()
@@ -61,8 +65,27 @@ public class CookController : MonoBehaviour
     
     public void InstantiateAnObject()
     {
+        if (_objectsPrefabs.Count == 0)
+        {
+            return;
+        }
+
+        var randomIndexPos = Random.Range(0, _objectsPrefabs.Count);
+        var fruitPrefab = _objectsPrefabs[randomIndexPos];
+
+        if ((edibleLayer & (1 << fruitPrefab.gameObject.layer)) != 0)
+        {
+            kolvoEdible++;
+            Debug.Log("Съедобно: " + kolvoEdible);
+        }
+        if ((inedibleLayer & (1 << fruitPrefab.gameObject.layer)) != 0)
+        {
+            kolvoInedible++;
+            Debug.Log("Несъедобно: " + kolvoInedible);
+        }
         
-        var fruitPrefab = _objects[Random.Range(0, _objects.Length)];
+        // _objectsPrefabs.RemoveAt(0);
+        
         var fruit = Instantiate(fruitPrefab, pos.position, Quaternion.identity);
 
         _rb = fruit.GetComponent<Rigidbody>();

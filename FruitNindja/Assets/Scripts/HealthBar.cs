@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public TextMeshProUGUI health_txt_right;
     public TextMeshProUGUI health_txt_left;
     [SerializeField] private TrackTime _trackTime;
-
+    
     [SerializeField] private Animator _cookAnimator;
 
     public int damage;
@@ -28,6 +28,7 @@ public class HealthBar : MonoBehaviour
         if (health > 0)
         {
             health -= damage;
+            AudioManager.Instance.PlaySFX("Hurt");
             if (health == 0)
             {
                 _trackTime.StopTrack();

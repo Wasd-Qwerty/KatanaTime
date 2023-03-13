@@ -33,6 +33,8 @@ public class SlicerMeshes : MonoBehaviour
               
                 upperHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
                 lowerHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
+                
+                AudioManager.Instance.PlaySFX("Slice");
 
                 Destroy(upperHullGameobject, _timeToDestroy);
                 Destroy(lowerHullGameobject, _timeToDestroy);

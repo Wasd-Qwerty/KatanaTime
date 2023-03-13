@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BattingObject : MonoBehaviour
 {
-    public Animator _stove;
+    public Animator _stoveAnimator;
     public Transform _forceTransform;
     private float _mindistance = 1;
 
@@ -23,7 +23,7 @@ public class BattingObject : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition) < _mindistance)
             {
                 
-                _stove.SetTrigger("Burn");
+                _stoveAnimator.SetTrigger("Burn");
                 Destroy(this.gameObject);
             }
         }
