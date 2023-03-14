@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GameObject Screen;
+    [Space]
+    public GameObject PauseScreen;
+    public GameObject WinScreen;
+    public GameObject LoseScreen;
+    [Space]
     public Button continueButton;
     public Button restartButton;
     public Button quitButton;
@@ -21,10 +26,10 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        pauseMenu.SetActive(false);
-        continueButton.onClick.AddListener(Continue);
-        restartButton.onClick.AddListener(Restart);
-        quitButton.onClick.AddListener(Quit);
+        Screen.SetActive(false);
+        PauseScreen.SetActive(false);
+        WinScreen.SetActive(false);
+        LoseScreen.SetActive(false);
 
         Renderer renderer = indicator.GetComponent<Renderer>();
         material = renderer.material;
@@ -42,10 +47,10 @@ public class PauseMenu : MonoBehaviour
             Continue();
         }
     }
-
-    void Pause()
+    
+    void ScreenActive()
     {
-        pauseMenu.SetActive(true);
+        Screen.SetActive(true);
         material.color = Color.green;
 
         Time.timeScale = 0f;
@@ -75,10 +80,16 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+    void Pause()
+    {
+        ScreenActive();
+        PauseScreen.SetActive(true);
+    }
 
     void Continue()
     {
-        pauseMenu.SetActive(false);
+        Screen.SetActive(false);
+        PauseScreen.SetActive(false);
         material.color = Color.red;
         Time.timeScale = 1f;
         try
@@ -108,14 +119,13 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void Restart()
+    public void Restart()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene("VTest");
     }
 
-    void Quit()
+    void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 }
