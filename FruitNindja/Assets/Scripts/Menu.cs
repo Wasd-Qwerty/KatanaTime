@@ -4,24 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     public GameObject Screen;
-    [Space]
-    public GameObject PauseScreen;
-    public GameObject WinScreen;
-    public GameObject LoseScreen;
-    [Space]
-    public Button continueButton;
-    public Button restartButton;
-    public Button quitButton;
 
     [Space]
-    [SerializeField] CookController cookController;
+    [SerializeField] private GameObject PauseScreen;
+    [SerializeField] private GameObject WinScreen;
+    [SerializeField] private GameObject LoseScreen;
 
     [Space]
-    [SerializeField] GameObject indicator;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private Button restartButton;
+    [SerializeField] private Button quitButton;
+
+    [Space]
+    [SerializeField] private GameObject score;
+    [SerializeField] private Text _scoreText;
+
+    [Space]
+    [SerializeField] private CookController cookController;
+
+    [Space]
+    [SerializeField] private GameObject indicator;
     Material material;
+
+    [Space]
+    [SerializeField] private Changing_Hands _changingHands;
+
+    bool notapause = false;
 
 
     void Start()
@@ -33,26 +44,54 @@ public class PauseMenu : MonoBehaviour
 
         Renderer renderer = indicator.GetComponent<Renderer>();
         material = renderer.material;
-        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (OVRInput.GetDown(OVRInput.Button.Three))
         {
             Pause();
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (OVRInput.GetDown(OVRInput.Button.Four))
         {
             Continue();
         }
     }
-    
+
     void ScreenActive()
     {
         Screen.SetActive(true);
         material.color = Color.green;
+    }
+    void ScreenUnActive()
+    {
+        Screen.SetActive(false);
+        material.color = Color.red;
+    }
 
+    public void ShowGameOverUI()
+    {
+        ScreenActive();
+        notapause = true;
+
+        LoseScreen.SetActive(true);
+        _changingHands.Death();
+    }
+
+    public void ShowWinUI()
+    {
+        ScreenActive();
+        notapause = true;
+        score.GetComponent<Text>().text = _scoreText.text;
+
+        WinScreen.SetActive(true);
+        _changingHands.Death();
+    }
+
+    void Pause()
+    {
+        ScreenActive();
+        PauseScreen.SetActive(true);
         Time.timeScale = 0f;
         try
         {
@@ -80,17 +119,10 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-    void Pause()
-    {
-        ScreenActive();
-        PauseScreen.SetActive(true);
-    }
 
-    void Continue()
+    public void Continue()
     {
-        Screen.SetActive(false);
-        PauseScreen.SetActive(false);
-        material.color = Color.red;
+        ScreenUnActive();
         Time.timeScale = 1f;
         try
         {
@@ -118,13 +150,11 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-
     public void Restart()
     {
         SceneManager.LoadScene("VTest");
     }
-
-    void Exit()
+    public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
     }

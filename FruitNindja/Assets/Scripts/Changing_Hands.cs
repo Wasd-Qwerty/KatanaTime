@@ -14,9 +14,6 @@ public class Changing_Hands : MonoBehaviour
     [SerializeField] private GameObject leftDiedHand;
     [SerializeField] private GameObject rightDiedHand;
 
-    public LayerMask edibleLayer;
-    public LayerMask inedibleLayer;
-
     private void Update()
     {
         Changing();
@@ -24,7 +21,7 @@ public class Changing_Hands : MonoBehaviour
 
     void Changing()
     {
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.Touch))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             left_hand_knife.SetActive(false);
             right_hand_knife.SetActive(true);
@@ -32,7 +29,7 @@ public class Changing_Hands : MonoBehaviour
             right_hand_pan.SetActive(false);
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger, OVRInput.Controller.Touch))
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         {
             left_hand_knife.SetActive(true);
             right_hand_knife.SetActive(false);
