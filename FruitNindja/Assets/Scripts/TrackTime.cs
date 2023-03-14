@@ -57,7 +57,7 @@ public class TrackTime : MonoBehaviour
             
             if (_timeInSecond == 0)
             {
-                _menuManager.ShowWinUI();
+                //_menuManager.ShowWinUI();
                 _cookAnimator.SetTrigger("win");
                 break;
             }
