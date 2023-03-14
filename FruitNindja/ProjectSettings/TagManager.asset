@@ -11,6 +11,7 @@ TagManager:
   - SamplesInfoPanel
   - MenuManager
   - Fridge
+  - TV
   layers:
   - Default
   - TransparentFX

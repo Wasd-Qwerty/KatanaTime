@@ -14,11 +14,6 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject LoseScreen;
 
     [Space]
-    [SerializeField] private Button continueButton;
-    [SerializeField] private Button restartButton;
-    [SerializeField] private Button quitButton;
-
-    [Space]
     [SerializeField] private GameObject score;
     [SerializeField] private Text _scoreText;
 
@@ -30,7 +25,7 @@ public class Menu : MonoBehaviour
     Material material;
 
     [Space]
-    [SerializeField] private Changing_Hands _changingHands;
+    public Changing_Hands _changingHands;
 
     bool notapause = false;
 
@@ -48,7 +43,7 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three))
+        if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
         {
             Pause();
         }

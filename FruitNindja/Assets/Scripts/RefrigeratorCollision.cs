@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class RefrigeratorCollision : MonoBehaviour
 {
-    private MenuManager _menuManager;
+    private Menu _menu;
 
     private void Start()
     {
-        _menuManager = GameObject.FindWithTag("MenuManager").GetComponent<MenuManager>();
+        _menu = GameObject.FindWithTag("TV").GetComponent<Menu>();
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.CompareTag("Fridge"))
         {
-            // menuManager.ShowGameOverUI();
+            _menu.ShowGameOverUI();
             gameObject.GetComponent<Collider>().isTrigger = false;
         }
     }
