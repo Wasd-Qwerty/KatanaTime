@@ -16,7 +16,7 @@ public class RefrigeratorCollision : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Fridge"))
         {
-            _menuManager.ShowGameOverUI();
+            // menuManager.ShowGameOverUI();
             gameObject.GetComponent<Collider>().isTrigger = false;
         }
     }
