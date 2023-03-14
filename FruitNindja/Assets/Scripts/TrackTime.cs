@@ -8,7 +8,7 @@ using TMPro;
 public class TrackTime : MonoBehaviour
 {
     [SerializeField] private float _timeInSecond = 120;
-    [SerializeField] private MenuManager _menuManager;
+    [SerializeField] private Menu _menu;
     [SerializeField] private Animator _cookAnimator;
 
     [SerializeField] private TextMeshProUGUI timeText;
@@ -57,7 +57,7 @@ public class TrackTime : MonoBehaviour
             
             if (_timeInSecond == 0)
             {
-                //_menuManager.ShowWinUI();
+                _menu.ShowWinUI();
                 _cookAnimator.SetTrigger("win");
                 break;
             }
