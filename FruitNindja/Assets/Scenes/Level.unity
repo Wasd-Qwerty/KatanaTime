@@ -3199,7 +3199,15 @@ PrefabInstance:
       propertyPath: cookController
       value: 
       objectReference: {fileID: 1371399213}
+    - target: {fileID: 4452824908747699873, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: pointer
+      value: 
+      objectReference: {fileID: 1899851438}
     - target: {fileID: 4452824909787952852, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: pointer
+      value: 
+      objectReference: {fileID: 1899851438}
+    - target: {fileID: 4452824910538352511, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: pointer
       value: 
       objectReference: {fileID: 1899851438}
@@ -3213,7 +3221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8109333684284780032, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8109333684284780032, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: m_LocalPosition.z
