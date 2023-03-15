@@ -152,6 +152,6 @@ public class Menu : MonoBehaviour
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("DemoTest");
     }
 }
