@@ -84,7 +84,6 @@ public class CookController : MonoBehaviour
             Debug.Log("Несъедобно: " + kolvoInedible);
         }
         
-        // _objectsPrefabs.RemoveAt(0);
         
         var fruit = Instantiate(fruitPrefab, pos.position, Quaternion.identity);
 

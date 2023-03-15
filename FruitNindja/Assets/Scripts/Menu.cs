@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
@@ -48,6 +50,12 @@ public class Menu : MonoBehaviour
         {
             Pause();
         }
+        //
+        // if (PauseScreen.activeSelf == true)
+        // {
+        //     EditorApplication.isPaused = true;
+        // }
+        
         // if (OVRInput.GetDown(OVRInput.Button.Four))
         // {
         //     Continue();
