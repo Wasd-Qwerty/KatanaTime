@@ -48,10 +48,10 @@ public class Menu : MonoBehaviour
         {
             Pause();
         }
-        if (OVRInput.GetDown(OVRInput.Button.Four))
-        {
-            Continue();
-        }
+        // if (OVRInput.GetDown(OVRInput.Button.Four))
+        // {
+        //     Continue();
+        // }
     }
 
     void ScreenActive()
@@ -148,7 +148,7 @@ public class Menu : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene("VTest");
+        SceneManager.LoadScene("Level");
     }
     public void MainMenu()
     {
