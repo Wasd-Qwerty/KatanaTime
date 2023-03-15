@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
     public GameObject Screen;
+
+    [Space]
+    [SerializeField] private Animator TVAnimator;
 
     [Space]
     [SerializeField] private GameObject PauseScreen;
@@ -46,16 +48,18 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
+        if (Input.GetKeyDown(KeyCode.Escape)) Pause();
+        if (Input.GetKeyDown(KeyCode.Space)) Continue();
+        /*if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
         {
             Pause();
-        }
+        }*/
         //
         // if (PauseScreen.activeSelf == true)
         // {
         //     EditorApplication.isPaused = true;
         // }
-        
+
         // if (OVRInput.GetDown(OVRInput.Button.Four))
         // {
         //     Continue();
@@ -75,6 +79,7 @@ public class Menu : MonoBehaviour
 
     public void ShowGameOverUI()
     {
+        TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;
 
@@ -84,6 +89,7 @@ public class Menu : MonoBehaviour
 
     public void ShowWinUI()
     {
+        TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;
         WinScreen.SetActive(true);
@@ -94,6 +100,8 @@ public class Menu : MonoBehaviour
 
     void Pause()
     {
+
+        TVAnimator.Play("TVactive");
         ScreenActive();
         PauseScreen.SetActive(true);
         Time.timeScale = 0f;
@@ -126,6 +134,7 @@ public class Menu : MonoBehaviour
 
     public void Continue()
     {
+        TVAnimator.Play("TVunactive");
         ScreenUnActive();
         Time.timeScale = 1f;
         try
