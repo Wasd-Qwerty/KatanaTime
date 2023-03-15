@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
@@ -77,7 +78,7 @@ public class Menu : MonoBehaviour
     {
         ScreenActive();
         notapause = true;
-        score.GetComponent<Text>().text = _scoreText.text;
+        _scoreText.text = score.GetComponent<TextMeshProUGUI>().text;
 
         WinScreen.SetActive(true);
         _changingHands.Death();
