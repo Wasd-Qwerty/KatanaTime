@@ -27,5 +27,4 @@ public class ScoreManager : MonoBehaviour
             _healthBar.Damage();
         }
     }
-
 }

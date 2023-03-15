@@ -86,9 +86,9 @@ public class Menu : MonoBehaviour
     {
         ScreenActive();
         notapause = true;
+        WinScreen.SetActive(true);
         _scoreText.text = score.GetComponent<TextMeshProUGUI>().text;
 
-        WinScreen.SetActive(true);
         _changingHands.Death();
     }
 
