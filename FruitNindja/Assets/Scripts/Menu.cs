@@ -48,22 +48,12 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) Pause();
-        if (Input.GetKeyDown(KeyCode.Space)) Continue();
-        /*if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
+        //if ((Input.GetKeyDown(KeyCode.Escape)) && notapause == false) Pause();
+        //if ((Input.GetKeyDown(KeyCode.Space)) && notapause == false) Continue();
+        if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
         {
             Pause();
-        }*/
-        //
-        // if (PauseScreen.activeSelf == true)
-        // {
-        //     EditorApplication.isPaused = true;
-        // }
-
-        // if (OVRInput.GetDown(OVRInput.Button.Four))
-        // {
-        //     Continue();
-        // }
+        }
     }
 
     void ScreenActive()
@@ -92,6 +82,7 @@ public class Menu : MonoBehaviour
         TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;
+
         WinScreen.SetActive(true);
         _scoreText.text = score.GetComponent<TextMeshProUGUI>().text;
 
@@ -100,7 +91,6 @@ public class Menu : MonoBehaviour
 
     void Pause()
     {
-
         TVAnimator.Play("TVactive");
         ScreenActive();
         PauseScreen.SetActive(true);
