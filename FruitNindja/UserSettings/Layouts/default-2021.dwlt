@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21
+  controlID: 38
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 44
+  controlID: 17
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -171,14 +171,14 @@ MonoBehaviour:
     y: 0
     width: 1224
     height: 654
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 149
+  controlID: 27
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 150
+  controlID: 28
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,22 +367,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Fonts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Fonts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Git repositories\FruitNindja\FruitNindja
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5c7f0000
-    m_LastClickedID: 32604
-    m_ExpandedIDs: 00000000f87e000000ca9a3b
+    m_SelectedIDs: 747f0000
+    m_LastClickedID: 32628
+    m_ExpandedIDs: 00000000f87e00008c7f00000429010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,8 +435,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 94700000
-    m_LastClickedInstanceID: 28820
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -538,9 +538,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8c720000
-      m_LastClickedID: 29324
-      m_ExpandedIDs: 02fbffff2cfbffff846e0000c46e0000947000001e7200008c72000090720000
+      m_SelectedIDs: da980000
+      m_LastClickedID: 39130
+      m_ExpandedIDs: 3ed0ffffdad5ffffded5ffffe0d5ffffe4d5fffffed5ffff28d6ffff76deffffc2faffff2cfbffff3e960000089700003a970000e4970000929800000099000004990000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -822,9 +822,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.9909549, y: 1.5788848, z: 3.6997375}
+    m_Target: {x: 1.5339527, y: 1.7363524, z: 5.8830156}
     speed: 2
-    m_Value: {x: -1.9909549, y: 1.5788848, z: 3.6997375}
+    m_Value: {x: 1.5339527, y: 1.7363524, z: 5.8830156}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -871,9 +871,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.05507138, y: 0.05898952, z: 0.003241476, w: -0.99679595}
+    m_Target: {x: 0.133812, y: 0.12630057, z: -0.017144341, w: 0.98284954}
     speed: 2
-    m_Value: {x: 0.055067934, y: 0.05898583, z: 0.003241273, w: -0.99673355}
+    m_Value: {x: 0.13380232, y: 0.12629145, z: -0.017143102, w: 0.98277855}
   m_Size:
     m_Target: 1.4962505
     speed: 2
@@ -975,15 +975,15 @@ MonoBehaviour:
       width: 895
       height: 612
     m_Scale: {x: 1.0609, y: 1.0609}
-    m_Translation: {x: 447.34595, y: 301.7061}
+    m_Translation: {x: 420.24725, y: 287.36462}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -421.66647
-      y: -284.38693
+      x: -396.12335
+      y: -270.8687
       width: 843.62335
       height: 576.8687
     m_MinimalGUI: 1
