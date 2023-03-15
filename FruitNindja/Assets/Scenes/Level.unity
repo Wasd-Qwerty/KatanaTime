@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec6fbe1c2f4cfe4a8875b55c463b1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 20
   health_txt_right: {fileID: 819315752}
   health_txt_left: {fileID: 263469688}
   _trackTime: {fileID: 882582223}
@@ -562,10 +562,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.3
+  m_Radius: 0.45
   m_Height: 2.86968
   m_Direction: 1
-  m_Center: {x: 0, y: -0.55630255, z: -0.3}
+  m_Center: {x: 0, y: -0.55630255, z: -0.75}
 --- !u!54 &55679185
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1811,9 +1811,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cbfea5b64d3794a9924bbafae87756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeInSecond: 4
+  _timeInSecond: 120
   _menu: {fileID: 984699059549526360}
-  _cookAnimator: {fileID: 1187716504}
+  _cook: {fileID: 1187716506}
   timeText: {fileID: 1379050012}
   _timeScroller: {fileID: 841312787}
   _timePoint: {fileID: 344407997}
@@ -2268,6 +2268,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5428067524848940782, guid: d54199b029a0b96479ba17edd0f28bec, type: 3}
     - target: {fileID: 2103125445423339678, guid: fb409300a0264124c87e8fb191b5e729, type: 3}
+      propertyPath: maxCountOfEdible
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103125445423339678, guid: fb409300a0264124c87e8fb191b5e729, type: 3}
       propertyPath: edibleLayer.m_Bits
       value: 1024
       objectReference: {fileID: 0}
@@ -2599,6 +2603,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1292151161192116334, guid: fb409300a0264124c87e8fb191b5e729, type: 3}
   m_PrefabInstance: {fileID: 1187716503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187716506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1292151162332107794, guid: fb409300a0264124c87e8fb191b5e729, type: 3}
+  m_PrefabInstance: {fileID: 1187716503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1341217925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2682,7 +2691,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2103125445423339678, guid: fb409300a0264124c87e8fb191b5e729, type: 3}
   m_PrefabInstance: {fileID: 1187716503}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1187716506}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70f671e418a951149bd97ddb5228a7f0, type: 3}
@@ -3048,7 +3057,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

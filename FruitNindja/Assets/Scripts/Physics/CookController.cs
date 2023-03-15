@@ -7,8 +7,12 @@ public class CookController : MonoBehaviour
     [SerializeField] private List<GameObject> _objectsPrefabs;
     public List<GameObject> objectsOnScene;
 
-    private int kolvoEdible = 0;
-    private int kolvoInedible = 0;
+    public float maxCountOfEdible = 80;
+    
+    public int countOfEdible = 0;
+    private int countOfInedible = 0;
+
+    public bool needOnlyEdible;
     
     [SerializeField] private Transform[] _objectSpawnPos;
 
@@ -70,27 +74,57 @@ public class CookController : MonoBehaviour
             return;
         }
 
+        GameObject objectForInst;
+        
         var randomIndexPos = Random.Range(0, _objectsPrefabs.Count);
-        var fruitPrefab = _objectsPrefabs[randomIndexPos];
-
-        if ((edibleLayer & (1 << fruitPrefab.gameObject.layer)) != 0)
+        var objectPrefab = _objectsPrefabs[randomIndexPos];
+        if (needOnlyEdible)
         {
-            kolvoEdible++;
-            Debug.Log("Съедобно: " + kolvoEdible);
+            if (countOfEdible == maxCountOfEdible)
+            {
+                needOnlyEdible = false;
+                InstantiateAnObject();
+                return;
+            }
+            while ((inedibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
+            {
+                randomIndexPos = Random.Range(0, _objectsPrefabs.Count);
+                objectPrefab = _objectsPrefabs[randomIndexPos];
+            }
+            if ((edibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
+            {
+                countOfEdible++;
+                Debug.Log("Съедобно: " + countOfEdible);
+            }
+            objectForInst = Instantiate(objectPrefab, pos.position, Quaternion.identity);
         }
-        if ((inedibleLayer & (1 << fruitPrefab.gameObject.layer)) != 0)
+        else
         {
-            kolvoInedible++;
-            Debug.Log("Несъедобно: " + kolvoInedible);
+            if (countOfEdible == maxCountOfEdible)
+            {
+                while ((edibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
+                {
+                    randomIndexPos = Random.Range(0, _objectsPrefabs.Count);
+                    objectPrefab = _objectsPrefabs[randomIndexPos];
+                }
+            }
+            if ((edibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
+            {
+                countOfEdible++;
+                Debug.Log("Съедобно: " + countOfEdible);
+            }
+            if ((inedibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
+            {
+                countOfInedible++;
+                Debug.Log("Несъедобно: " + countOfInedible);
+            }
+            objectForInst = Instantiate(objectPrefab, pos.position, Quaternion.identity);
         }
         
-        
-        var fruit = Instantiate(fruitPrefab, pos.position, Quaternion.identity);
-
-        _rb = fruit.GetComponent<Rigidbody>();
+        _rb = objectForInst.GetComponent<Rigidbody>();
         _rb.AddForce(_forceDirections[0] * _force, _forceMode);
-        objectsOnScene.Add(fruit);
-        Destroy(fruit, _timeToDestroy);
+        objectsOnScene.Add(objectForInst);
+        Destroy(objectForInst, _timeToDestroy);
     }
 
     

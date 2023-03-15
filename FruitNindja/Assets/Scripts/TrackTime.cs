@@ -9,7 +9,9 @@ public class TrackTime : MonoBehaviour
 {
     [SerializeField] private float _timeInSecond = 120;
     [SerializeField] private Menu _menu;
-    [SerializeField] private Animator _cookAnimator;
+    [SerializeField] private GameObject _cook;
+    private CookController _cookController;
+    private Animator _cookAnimator;
 
     [SerializeField] private TextMeshProUGUI timeText;
     
@@ -26,6 +28,8 @@ public class TrackTime : MonoBehaviour
 
     void Start()
     {
+        _cookController = _cook.GetComponent<CookController>();
+        _cookAnimator = _cook.GetComponent<Animator>();
         StartCoroutine("Track");
     }
 
@@ -40,6 +44,13 @@ public class TrackTime : MonoBehaviour
         while (true)
         {
             _timeInSecond -= 1;
+            timeText.text = Convert.ToString(_timeInSecond);
+
+            if (_timeInSecond < 20 && _cookController.countOfEdible != _cookController.maxCountOfEdible)
+            {
+                _cookController.needOnlyEdible = true;
+            }
+            
             var posX = ((_minPointPos - _maxPointPos) * (_timeInSecond / maxTime)) + _maxPointPos;
             
             var pointPosition = _timePoint.transform.position;
@@ -53,7 +64,6 @@ public class TrackTime : MonoBehaviour
             localScale = new Vector3(localScale.x, scaleY ,localScale.z);
             _timeScroller.transform.localScale = localScale;
 
-            timeText.text = Convert.ToString(_timeInSecond);
             
             if (_timeInSecond == 0)
             {
