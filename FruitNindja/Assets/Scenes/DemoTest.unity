@@ -3976,7 +3976,7 @@ GameObject:
   - component: {fileID: 1594077468}
   - component: {fileID: 1594077467}
   m_Layer: 5
-  m_Name: LastScore (4)
+  m_Name: estimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4136,7 +4136,7 @@ GameObject:
   - component: {fileID: 1673864780}
   - component: {fileID: 1673864779}
   m_Layer: 5
-  m_Name: LastScore (2)
+  m_Name: estimationText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
