@@ -538,7 +538,7 @@ MonoBehaviour:
   health_txt_right: {fileID: 819315752}
   health_txt_left: {fileID: 263469688}
   _trackTime: {fileID: 882582223}
-  _scoreManager: {fileID: 0}
+  _scoreManager: {fileID: 1183554797}
   _cookAnimator: {fileID: 1187716504}
   damage: 1
 --- !u!114 &55679183
@@ -1337,8 +1337,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284111601
-  m_fontColor: {r: 0.9433962, g: 0.35154858, b: 0.35154858, a: 1}
+    rgba: 4278201855
+  m_fontColor: {r: 1, g: 0.1758267, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1417,7 +1417,6 @@ GameObject:
   - component: {fileID: 527615132}
   - component: {fileID: 527615131}
   - component: {fileID: 527615130}
-  - component: {fileID: 527615129}
   m_Layer: 0
   m_Name: TimeCanvas
   m_TagString: Untagged
@@ -1446,23 +1445,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.113, y: 0.65058315}
   m_SizeDelta: {x: 1, y: 0.43}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &527615129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527615127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3e9e6cdc644484eabd3e2d4155c427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1379050012}
-  _healthBar: {fileID: 55679182}
-  _cookController: {fileID: 0}
-  countOfSlicedObjects: 0
-  estimation: S
 --- !u!114 &527615130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,10 +2326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 24042577}
+  _estimationText: {fileID: 523983456}
   _healthBar: {fileID: 55679182}
-  _cookController: {fileID: 0}
-  countOfSlicedObjects: 0
-  estimation: S
+  _cookController: {fileID: 1371399213}
 --- !u!114 &1183554798
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,13 +17,12 @@ public class ScoreManager : MonoBehaviour
     {
         _estimationText.text = estimation;
         CalculateEstimation();
-        
     }
 
     private void CalculateEstimation()
     {
         var cacheScore = Convert.ToDouble(_scoreText.text);
-        var percentOfSlice = cacheScore / (_cookController.countOfEdible * 100);
+        var percentOfSlice = cacheScore / (_cookController.countOfEdible * 100) * 100;
         if (percentOfSlice > 99)
         {
             // превосходно
