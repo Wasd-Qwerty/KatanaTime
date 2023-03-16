@@ -6,21 +6,24 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _estimationText;
     [SerializeField] private HealthBar _healthBar;
 
     [SerializeField] private CookController _cookController;
-    public int countOfSlicedObjects = 0;
     
-    public string estimation = "S";
+    private string estimation = "S";
     
     private void Update()
     {
+        _estimationText.text = estimation;
         CalculateEstimation();
+        
     }
 
     private void CalculateEstimation()
     {
-        var percentOfSlice = countOfSlicedObjects / _cookController.maxCountOfEdible * 100;
+        var cacheScore = Convert.ToDouble(_scoreText.text);
+        var percentOfSlice = cacheScore / (_cookController.countOfEdible * 100);
         if (percentOfSlice > 99)
         {
             // превосходно

@@ -43,7 +43,6 @@ public class SlicerMeshes : MonoBehaviour
                 Destroy(objectToBeSliced.gameObject);
             
                 _scoreManager.IncreaseScore(_editNumberForIncrease);
-                _scoreManager.countOfSlicedObjects++;
             }
             catch (Exception e)
             {
