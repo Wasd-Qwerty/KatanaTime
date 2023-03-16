@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public TextMeshProUGUI health_txt_right;
     public TextMeshProUGUI health_txt_left;
     [SerializeField] private TrackTime _trackTime;
-    
+    [SerializeField] private ScoreManager _scoreManager;
     [SerializeField] private Animator _cookAnimator;
 
     public int damage;
@@ -43,5 +43,6 @@ public class HealthBar : MonoBehaviour
     private void Death()
     {
         _cookAnimator.SetTrigger("gameOver");
+        _scoreManager.Death();
     }
 }

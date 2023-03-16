@@ -21,8 +21,7 @@ public class MenuManager : MonoBehaviour
     public void StartLevel()
     {
         _doorAnimator.SetTrigger("occurrence");
-        _mainUI.SetActive(false);
-        _levelsUI.SetActive(false);
+        gameObject.SetActive(false);
     }
     
     public void ShowLevels()

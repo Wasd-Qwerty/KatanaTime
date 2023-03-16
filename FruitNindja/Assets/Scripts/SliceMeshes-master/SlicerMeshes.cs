@@ -5,13 +5,14 @@ using EzySlice;
 public class SlicerMeshes : MonoBehaviour
 {
     public LayerMask sliceMask;
-    GameObject upperHullGameobject, lowerHullGameobject;
+    GameObject _upperHull, _lowerHull;
 
     [SerializeField] private ScoreManager _scoreManager;
     
     [SerializeField] private float _timeToDestroy;
     public Material materialAfterSlice;
 
+    [SerializeField] private double _editNumberForIncrease = 100;
     public void Touch()
     {
         Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(1, 0.1f, 0.1f), transform.rotation, sliceMask);
@@ -22,26 +23,27 @@ public class SlicerMeshes : MonoBehaviour
                 var parrentVelocity = objectToBeSliced.gameObject.GetComponent<Rigidbody>().velocity;
             
                 SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
-                upperHullGameobject = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
-                lowerHullGameobject = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
+                _upperHull = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
+                _lowerHull = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
 
-                upperHullGameobject.transform.position = objectToBeSliced.transform.position;
-                lowerHullGameobject.transform.position = objectToBeSliced.transform.position;
+                _upperHull.transform.position = objectToBeSliced.transform.position;
+                _lowerHull.transform.position = objectToBeSliced.transform.position;
 
-                MakeItPhysical(upperHullGameobject);
-                MakeItPhysical(lowerHullGameobject);
+                MakeItPhysical(_upperHull);
+                MakeItPhysical(_lowerHull);
               
-                upperHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
-                lowerHullGameobject.GetComponent<Rigidbody>().velocity = parrentVelocity;
+                _upperHull.GetComponent<Rigidbody>().velocity = parrentVelocity;
+                _lowerHull.GetComponent<Rigidbody>().velocity = parrentVelocity;
                 
                 AudioManager.Instance.PlaySFX("Slice");
 
-                Destroy(upperHullGameobject, _timeToDestroy);
-                Destroy(lowerHullGameobject, _timeToDestroy);
+                Destroy(_upperHull, _timeToDestroy);
+                Destroy(_lowerHull, _timeToDestroy);
             
                 Destroy(objectToBeSliced.gameObject);
             
-                _scoreManager.IncreaseScore(100);
+                _scoreManager.IncreaseScore(_editNumberForIncrease);
+                _scoreManager.countOfSlicedObjects++;
             }
             catch (Exception e)
             {

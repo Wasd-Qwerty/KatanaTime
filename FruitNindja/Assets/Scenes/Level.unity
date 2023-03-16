@@ -1189,6 +1189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 1379050012}
   _healthBar: {fileID: 55679182}
+  _cookController: {fileID: 0}
+  countOfSlicedObjects: 0
+  estimation: S
 --- !u!114 &527615130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1932,10 @@ PrefabInstance:
       propertyPath: cookController
       value: 
       objectReference: {fileID: 1371399213}
+    - target: {fileID: 4452824910538352386, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8109333684284780032, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2067,6 +2074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 24042577}
   _healthBar: {fileID: 55679182}
+  _cookController: {fileID: 0}
+  countOfSlicedObjects: 0
+  estimation: S
 --- !u!114 &1183554798
 MonoBehaviour:
   m_ObjectHideFlags: 0
