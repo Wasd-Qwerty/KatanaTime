@@ -91,6 +91,7 @@ public class Menu : MonoBehaviour
 
     void Pause()
     {
+        _changingHands.Death();
         TVAnimator.Play("TVactive");
         ScreenActive();
         PauseScreen.SetActive(true);
@@ -122,11 +123,16 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void Continue()
-    {
+    public void TVunactive()
+    { 
+        _changingHands.Death();
+
         TVAnimator.Play("TVunactive");
         ScreenUnActive();
         PauseScreen.SetActive(false);
+    }
+    public void Continue()
+    {
         Time.timeScale = 1f;
         try
         {
@@ -156,10 +162,12 @@ public class Menu : MonoBehaviour
     }
     public void Restart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level");
     }
     public void MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("DemoTest");
     }
 }
