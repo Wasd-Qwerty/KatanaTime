@@ -19,9 +19,8 @@ public class BattingObject : MonoBehaviour
             
             if (Vector3.Distance(transform.position, targetPosition) < _mindistance)
             {
-                
                 _stoveAnimator.SetTrigger("Burn");
-                Destroy(this.gameObject);
+                gameObject.GetComponent<BeforeDestroy>().DestroyObj(0);
             }
         }
     }

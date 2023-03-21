@@ -12,7 +12,7 @@ public class SlicerMeshes : MonoBehaviour
     [SerializeField] private float _timeToDestroy;
     public Material materialAfterSlice;
 
-    [SerializeField] private double _editNumberForIncrease = 100;
+    [SerializeField] private int _editNumberForIncrease = 100;
     public void Touch()
     {
         Collider[] objectsToBeSliced = Physics.OverlapBox(transform.position, new Vector3(1, 0.1f, 0.1f), transform.rotation, sliceMask);
@@ -39,9 +39,10 @@ public class SlicerMeshes : MonoBehaviour
 
                 Destroy(_upperHull, _timeToDestroy);
                 Destroy(_lowerHull, _timeToDestroy);
-            
+
                 Destroy(objectToBeSliced.gameObject);
-            
+                
+                _scoreManager.countOfEdible++;
                 _scoreManager.IncreaseScore(_editNumberForIncrease);
             }
             catch (Exception e)

@@ -12,6 +12,7 @@ TagManager:
   - MenuManager
   - Fridge
   - TV
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

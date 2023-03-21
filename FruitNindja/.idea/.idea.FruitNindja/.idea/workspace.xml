@@ -9,8 +9,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattingObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BeforeDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RefrigeratorCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveRenderTextureToFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/Sound.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +113,7 @@
       <workItem from="1678789678010" duration="3697000" />
       <workItem from="1678870816096" duration="7711000" />
       <workItem from="1678953549476" duration="9262000" />
-      <workItem from="1679387053863" duration="1024000" />
+      <workItem from="1679387053863" duration="13794000" />
     </task>
     <servers />
   </component>

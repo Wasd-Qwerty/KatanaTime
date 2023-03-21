@@ -124,7 +124,7 @@ public class CookController : MonoBehaviour
         _rb = objectForInst.GetComponent<Rigidbody>();
         _rb.AddForce(_forceDirections[0] * _force, _forceMode);
         objectsOnScene.Add(objectForInst);
-        Destroy(objectForInst, _timeToDestroy);
+        objectForInst.AddComponent<BeforeDestroy>().DestroyObj(_timeToDestroy);
     }
 
     
