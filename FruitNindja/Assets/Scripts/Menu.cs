@@ -48,12 +48,12 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Escape)) && notapause == false) Pause();
-        if ((Input.GetKeyDown(KeyCode.Space)) && notapause == false) Continue();
-/*        if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
+        /*if ((Input.GetKeyDown(KeyCode.Escape)) && notapause == false) Pause();
+        if ((Input.GetKeyDown(KeyCode.Space)) && notapause == false) Continue();*/
+        if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
         {
             Pause();
-        }*/
+        }
     }
 
     void ScreenActive()
