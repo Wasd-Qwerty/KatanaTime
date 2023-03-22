@@ -287,7 +287,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -322,10 +322,10 @@ MonoBehaviour:
   _forceTransform: {fileID: 0}
   edibleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   inedibleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!1001 &4541931539698247051
 PrefabInstance:
   m_ObjectHideFlags: 0
