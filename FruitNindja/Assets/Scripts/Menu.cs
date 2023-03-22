@@ -92,6 +92,11 @@ public class Menu : MonoBehaviour
     void Pause()
     {
         _changingHands.Death();
+        if (!notapause)
+        {
+            Continue();
+        }
+
         TVAnimator.Play("TVactive");
         ScreenActive();
         PauseScreen.SetActive(true);
@@ -163,11 +168,11 @@ public class Menu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void MainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("DemoTest");
+        SceneManager.LoadScene(0);
     }
 }

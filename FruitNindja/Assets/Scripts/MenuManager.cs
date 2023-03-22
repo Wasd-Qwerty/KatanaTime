@@ -1,17 +1,24 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class MenuManager : MonoBehaviour
 {
     [Header("Scenes")] [SerializeField] private List<SceneInfo> _scenesInfo;
 
-    [SerializeField] private Animator _doorAnimator;
+    
+    [SerializeField] private DoorController _doorController;
+
     [SerializeField] private GameObject _mainUI;
     [SerializeField] private GameObject _levelsUI;
+    [SerializeField] private GameObject _settingsUI;
 
-    private Color[] Colors = 
+    [SerializeField] private Text _musicButtonText;
+    [SerializeField] private Text _sfxButtonText;
+    
+    private Color[] _colors = 
      {
          Color.red,
          Color.green, 
@@ -20,6 +27,17 @@ public class MenuManager : MonoBehaviour
     
     private void Start()
     {
+
+        if (PlayerPrefs.HasKey("SettingsMusicOn"))
+        {
+            var musicOnInt =  PlayerPrefs.GetInt("SettingsMusicOn");
+            AudioManager.Instance.musicOn = musicOnInt == 1;
+        }
+        if (PlayerPrefs.HasKey("SettingsSfxOn"))
+        {
+            var sfxOnInt =  PlayerPrefs.GetInt("SettingsSfxOn");
+            AudioManager.Instance.sfxOn = sfxOnInt == 1;
+        }
         Time.timeScale = 1;
         ShowMain();
         LevelLoadInfo();
@@ -31,6 +49,14 @@ public class MenuManager : MonoBehaviour
         {
             sceneInfo.estimation.color = CheckColorForEstimation(sceneInfo.estimation.text);
         }
+
+        CheckColorAudioSettings();
+    }
+
+    private void CheckColorAudioSettings()
+    {
+        _musicButtonText.color = AudioManager.Instance.musicOn ? Color.green : Color.red;
+        _sfxButtonText.color = AudioManager.Instance.sfxOn ? Color.green : Color.red;
     }
 
     private void LevelLoadInfo()
@@ -65,7 +91,7 @@ public class MenuManager : MonoBehaviour
         }
         if (estimation == "S")
         {
-            return Colors[Random.Range(0,Colors.Length)];
+            return _colors[Random.Range(0,_colors.Length)];
         }
         if (estimation == "A")
         {
@@ -78,9 +104,10 @@ public class MenuManager : MonoBehaviour
         return Color.red;
     }
 
-    public void StartLevel()
+    public void StartLevel(GameObject level)
     {
-        _doorAnimator.SetTrigger("occurrence");
+        _doorController.sceneName = level.name;
+        _doorController.Occurrence();
         gameObject.SetActive(false);
     }
 
@@ -88,11 +115,42 @@ public class MenuManager : MonoBehaviour
     {
         _mainUI.SetActive(false);
         _levelsUI.SetActive(true);
+        _settingsUI.SetActive(false);
     }
 
     public void ShowMain()
     {
         _mainUI.SetActive(true);
         _levelsUI.SetActive(false);
+        _settingsUI.SetActive(false);
+    }
+    public void ShowSettings()
+    {
+        _mainUI.SetActive(false);
+        _levelsUI.SetActive(false);
+        _settingsUI.SetActive(true);
+    }
+
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteAll();
+        LevelLoadInfo();
+    }
+
+    
+    public void Music()
+    {
+        AudioManager.Instance.musicOn = !AudioManager.Instance.musicOn;
+        var musicOnInt = AudioManager.Instance.musicOn ? 1 : 0; 
+        PlayerPrefs.SetInt("SettingsMusicOn", musicOnInt);
+        PlayerPrefs.Save();
+    }
+    
+    public void Sfx()
+    {
+        AudioManager.Instance.sfxOn = !AudioManager.Instance.sfxOn;
+        var sfxOnInt = AudioManager.Instance.sfxOn ? 1 : 0;
+        PlayerPrefs.SetInt("SettingsSfxOn", sfxOnInt);
+        PlayerPrefs.Save();
     }
 }

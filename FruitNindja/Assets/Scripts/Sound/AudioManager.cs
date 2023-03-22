@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
+    public bool musicOn = true;
+    public bool sfxOn = true;
+    
     public void Awake()
     {
         if (Instance == null)
@@ -26,6 +29,12 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Theme");
+    }
+
+    private void Update()
+    {
+        musicSource.mute = !musicOn;
+        sfxSource.mute = !sfxOn;
     }
 
     public void PlayMusic(string name)
