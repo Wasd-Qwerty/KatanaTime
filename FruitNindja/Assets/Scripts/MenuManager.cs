@@ -81,6 +81,22 @@ public class MenuManager : MonoBehaviour
                 sceneInfo.estimation.text = "none";
             }
         }
+
+        Zaserino();
+    }
+
+    private void Zaserino()
+    {
+        List<string> estimationForUnlock = new List<string>() { "S", "A", "B"};
+        for (int i = 1; i < _scenesInfo.Count; i++)
+        {
+            _scenesInfo[i].unlocked = estimationForUnlock.Contains(_scenesInfo[i - 1].estimation.text);
+        }
+
+        foreach (var sceneInfo in _scenesInfo)
+        {
+            sceneInfo.zaserino.SetActive(!sceneInfo.unlocked);
+        }
     }
 
     Color CheckColorForEstimation(string estimation)
