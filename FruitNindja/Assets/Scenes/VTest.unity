@@ -191,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,22 +461,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342467566}
   m_CullTransparentMesh: 1
---- !u!114 &385807359 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3650421908678932966, guid: 1306695ef5340084eb8382c25558343b, type: 3}
-  m_PrefabInstance: {fileID: 934614058}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b528c0463d87a41a06a87318c02b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &385807361 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8699911358548853324, guid: 1306695ef5340084eb8382c25558343b, type: 3}
-  m_PrefabInstance: {fileID: 934614058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &488810464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1725,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1004632
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.2926888
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.42261827
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9063079
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939776896920053197, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406576187519828513, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406576187519828514, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1914965509}
+    - target: {fileID: 3406576187519828514, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: _changingHands
+      value: 
+      objectReference: {fileID: 1088964000}
+    - target: {fileID: 3406576187519828514, guid: 1306695ef5340084eb8382c25558343b, type: 3}
+      propertyPath: cookController
+      value: 
+      objectReference: {fileID: 1927244251}
     - target: {fileID: 3650421908678932966, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: score
       value: 
@@ -1748,7 +1780,7 @@ PrefabInstance:
     - target: {fileID: 3650421908678932966, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: TVAnimator
       value: 
-      objectReference: {fileID: 385807361}
+      objectReference: {fileID: 0}
     - target: {fileID: 3650421908678932966, guid: 1306695ef5340084eb8382c25558343b, type: 3}
       propertyPath: _changingHands
       value: 
@@ -2081,18 +2113,6 @@ MonoBehaviour:
   canChange: 1
   leftDiedHand: {fileID: 1262827418}
   rightDiedHand: {fileID: 1594622317}
---- !u!114 &1088964001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088963997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a796214369437141bbeaaf81757168f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1088964002
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2742,7 +2762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeInSecond: 100
-  _menu: {fileID: 385807359}
+  _menu: {fileID: 0}
   _cook: {fileID: 1927244250}
   timeText: {fileID: 709396601}
   _timeScroller: {fileID: 584922724}
@@ -3264,7 +3284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3989197577404509794, guid: 58e991b7b9ad95b4fb12cfce3855706c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3989197577404509794, guid: 58e991b7b9ad95b4fb12cfce3855706c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3468,7 +3488,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f96a380fee5ba9844a6e4700eb10b5b1, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f96a380fee5ba9844a6e4700eb10b5b1, type: 3}
       propertyPath: m_LocalScale.x
