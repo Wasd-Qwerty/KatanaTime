@@ -34,10 +34,6 @@ public class Menu : MonoBehaviour
 
     bool notapause = false;
     bool ispaused = false;
-    void Changing_Afnimation()
-    {
-        ispaused = !ispaused;
-    }
 
     void Start()
     {
@@ -95,13 +91,11 @@ public class Menu : MonoBehaviour
 
     void Pause()
     {
-        if (ispaused == false)
+        if (!ispaused)
         {
+            ispaused = true;
+            Debug.Log(ispaused);
             _changingHands.Death();
-            if (!notapause)
-            {
-                Continue();
-            }
 
             TVAnimator.Play("TVactive");
             ScreenActive();
@@ -139,8 +133,6 @@ public class Menu : MonoBehaviour
     { 
         if(ispaused == true)
         {
-            _changingHands.Death();
-
             TVAnimator.Play("TVunactive");
             ScreenUnActive();
             PauseScreen.SetActive(false);
@@ -148,7 +140,9 @@ public class Menu : MonoBehaviour
     }
     public void Continue()
     {
+        ispaused = false;
         Time.timeScale = 1f;
+        _changingHands.Death();
         try
         {
             foreach (var obj in cookController.objectsOnScene)
