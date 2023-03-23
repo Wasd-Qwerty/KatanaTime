@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 9143647471622637884, guid: 836f1184972bf2d4498a9411c1bb19e7, type: 3}
       propertyPath: _menu
       value: 
-      objectReference: {fileID: 936415389}
+      objectReference: {fileID: 0}
     - target: {fileID: 9143647471622637884, guid: 836f1184972bf2d4498a9411c1bb19e7, type: 3}
       propertyPath: _scoreManager
       value: 
@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3825743068176598358, guid: ff3a5e7554c7b63438d54222d0b16fe7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3a5e7554c7b63438d54222d0b16fe7, type: 3}
@@ -751,6 +751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftHandCleaver
       objectReference: {fileID: 0}
+    - target: {fileID: 6561563320360982080, guid: ee03934c5f961214494d2c9529d9e22c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee03934c5f961214494d2c9529d9e22c, type: 3}
 --- !u!1 &712863667
@@ -1012,6 +1016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightHandCuttingBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 1213816090888289391, guid: 03b71918518e45e429b03af18ca371b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1987081261620717269, guid: 03b71918518e45e429b03af18ca371b2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1159,17 +1167,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1306695ef5340084eb8382c25558343b, type: 3}
---- !u!114 &936415389 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3650421908678932966, guid: 1306695ef5340084eb8382c25558343b, type: 3}
-  m_PrefabInstance: {fileID: 936415388}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b528c0463d87a41a06a87318c02b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &985490645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5750344003960387698, guid: e236227f3b9a8fb4b95db882bf835ae7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e236227f3b9a8fb4b95db882bf835ae7, type: 3}
@@ -1766,7 +1763,7 @@ Transform:
   - {fileID: 985490647}
   - {fileID: 7800219917820083728}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1881862217 stripped
 MonoBehaviour:
