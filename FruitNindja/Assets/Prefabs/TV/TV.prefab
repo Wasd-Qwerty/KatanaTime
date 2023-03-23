@@ -2588,7 +2588,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3650421908678932966}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Continue
+        m_MethodName: TVunactive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2843,7 +2843,7 @@ Transform:
   m_GameObject: {fileID: 8917677747251655866}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -4.532, y: 1.575, z: 3.868}
-  m_LocalScale: {x: 0.2, y: 0.7509067, z: 0.8600896}
+  m_LocalScale: {x: 0.13, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4970710200380716389}
@@ -2866,6 +2866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Screen: {fileID: 6918164107633510605}
+  TVAnimator: {fileID: 8699911358548853324}
   PauseScreen: {fileID: 4452824909787952810}
   WinScreen: {fileID: 4452824910538352386}
   LoseScreen: {fileID: 4452824908747699878}
@@ -2883,10 +2884,10 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917677747251655866}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2be6411fad5a6a74baf21e9d0c51c3db, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 599aa4dfcec88764ca3e8110a823c8b8, type: 3}
+  m_Controller: {fileID: 9100000, guid: e08b86e5d20f6c449953c7dee88cdd35, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

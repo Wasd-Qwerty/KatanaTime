@@ -28,7 +28,7 @@ public class Batting : MonoBehaviour
             (inedibleLayer & (1 << collision.gameObject.layer)) != 0)
         {
             collision.gameObject.GetComponent<BattingObject>()._stoveAnimator = _stoveAnimator;
-            collision.gameObject.GetComponent<BattingObject>()._forceTransform = _forceTransform;
+            collision.gameObject.GetComponent<BattingObject>()._forcePos = _forceTransform.position;
 
             collision.gameObject.GetComponent<BattingObject>()._isBatting = true;
             Destroy(collision.gameObject.GetComponent<Collider>());
