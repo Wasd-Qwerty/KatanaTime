@@ -45,7 +45,7 @@ public class SlicerMeshes : MonoBehaviour
                 _scoreManager.countOfEdible++;
                 _scoreManager.IncreaseScore(_editNumberForIncrease);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // ignored
             }

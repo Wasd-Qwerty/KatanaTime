@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,12 +22,17 @@ namespace Cooker
         [SerializeField] private float _force;
         [SerializeField] private ForceMode _tableMode;
 
+        private void Start()
+        {
+            GetComponent<Animator>().SetInteger("level", 2);
+        }
+
         public void ThrowTable()
         {
             _rbTable.AddForce(_forcePosition * _force, _tableMode);
             foreach (var gObject in _gameObjectsForExplosion)
             {
-                gObject.AddComponent<MeshCollider>().convex = true;
+                gObject.AddComponent<SphereCollider>();
                 gObject.AddComponent<Rigidbody>().AddExplosionForce(_explosionForce, _explosionTransform.position,
                     _explosionRadius, _upwardsModifier, _expMode);
                 Destroy(gObject, 4);

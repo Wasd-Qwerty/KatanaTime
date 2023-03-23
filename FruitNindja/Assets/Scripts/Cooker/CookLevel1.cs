@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Cooker
@@ -10,7 +11,12 @@ namespace Cooker
         
         private ForceMode _forceMode = ForceMode.Impulse;
         private float _force = 15;
-        
+
+        private void Start()
+        {
+            GetComponent<Animator>().SetInteger("level", 1);
+        }
+
         public void ThrowTheFridge()
         {
             var localPosition = _fridge.transform.position;
