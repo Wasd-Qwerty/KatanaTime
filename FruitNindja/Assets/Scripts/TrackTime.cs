@@ -25,7 +25,7 @@ public class TrackTime : MonoBehaviour
     [SerializeField] private float _minScrollerScale;
     [SerializeField] private float _maxScrollerScale;
 
-
+    [SerializeField] private ScoreManager _scoreManager;
     void Start()
     {
         _cookController = _cook.GetComponent<CookController>();
@@ -65,10 +65,11 @@ public class TrackTime : MonoBehaviour
             _timeScroller.transform.localScale = localScale;
 
             
-            if (_timeInSecond == 0)
+            if (_timeInSecond <= 0)
             {
                 _menu.ShowWinUI();
                 _cookAnimator.SetTrigger("win");
+                _scoreManager.Death();
                 break;
             }
 

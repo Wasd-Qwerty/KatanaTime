@@ -38,6 +38,5 @@ public class HealthBar : MonoBehaviour
     private void Death()
     {
         _cookAnimator.SetTrigger("gameOver");
-        _scoreManager.Death();
     }
 }
