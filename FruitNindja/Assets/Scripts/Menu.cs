@@ -94,7 +94,6 @@ public class Menu : MonoBehaviour
         if (!ispaused)
         {
             ispaused = true;
-            Debug.Log(ispaused);
             _changingHands.Death();
 
             TVAnimator.Play("TVactive");
