@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class SliceListener : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class SliceListener : MonoBehaviour
     private void Start()
     {
         _boxCollider = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        Debug.Log(transform.rotation.eulerAngles.y);
     }
 
     private void FixedUpdate()

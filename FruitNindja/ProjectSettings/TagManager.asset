@@ -7,9 +7,10 @@ TagManager:
   - RoomLight
   - SamplesInfoPanel
   - MenuManager
-  - Fridge
   - TV
   - ScoreManager
+  - TargetForDestroy
+  - DeadInside
   layers:
   - Default
   - TransparentFX

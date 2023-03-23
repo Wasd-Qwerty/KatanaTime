@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RefrigeratorCollision : MonoBehaviour
+public class DeadInsideCollision : MonoBehaviour
 {
     private Menu _menu;
 
@@ -11,9 +11,12 @@ public class RefrigeratorCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Fridge"))
+        if (collider.gameObject.CompareTag("DeadInside"))
         {
             _menu.ShowGameOverUI();
+            collider.isTrigger = true;
+            collider.GetComponent<Rigidbody>().velocity = new Vector3(0, collider.GetComponent<Rigidbody>().velocity.y, 0);
+            Destroy(collider.gameObject, 2);
             gameObject.GetComponent<Collider>().isTrigger = false;
         }
     }
