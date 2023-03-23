@@ -192,7 +192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6035397122785385638}
-  m_LocalRotation: {x: -0.00000016858739, y: -0.70710665, z: 0.7071069, w: -0.0000001067701}
+  m_LocalRotation: {x: 0, y: 0.7069834, z: -0.7072302, w: 0}
   m_LocalPosition: {x: -0.059824944, y: 1.3409833, z: -0.6658611}
   m_LocalScale: {x: 0.0071400367, y: 0.0071400367, z: 0.0071400367}
   m_ConstrainProportionsScale: 0
@@ -200,7 +200,7 @@ Transform:
   - {fileID: 8610287357713868663}
   m_Father: {fileID: 6124017623869773923}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.98, y: 0, z: -180}
 --- !u!33 &8000065519708085717
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8b0c349fab3221f4c954bd4331985d19, type: 2}
+  - {fileID: 2100000, guid: 42a0a9b9ee5292744a8efb3d8f576bf6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -443,6 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6124017623869773923}
   - component: {fileID: 562510208956185480}
+  - component: {fileID: 882961142}
   m_Layer: 0
   m_Name: "\u0414\u0432\u0435\u0440\u044C"
   m_TagString: Untagged
@@ -480,10 +481,26 @@ Animator:
   m_Controller: {fileID: 9100000, guid: bff63015bc3a52d4a9ff5db166ec4fef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &882961142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897035477477294809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00667df2cb248a34a8338a91377df7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  _level1: {fileID: 2100000, guid: 7192add91b3d0164783b52550d5a092d, type: 2}
+  _level2: {fileID: 2100000, guid: 8b0c349fab3221f4c954bd4331985d19, type: 2}
+  _background: {fileID: 6184507943021862598}

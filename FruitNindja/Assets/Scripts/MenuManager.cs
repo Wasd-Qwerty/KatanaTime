@@ -169,4 +169,9 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.SetInt("SettingsSfxOn", sfxOnInt);
         PlayerPrefs.Save();
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

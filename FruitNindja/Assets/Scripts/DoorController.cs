@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour
 {
     public string sceneName;
-
+    [SerializeField] private Material _level1;
+    [SerializeField] private Material _level2;
+    [SerializeField] private GameObject _background; 
+    
     public void Occurrence()
     {
+        if (sceneName == "Level")
+        {
+            _background.GetComponent<MeshRenderer>().material = _level1;
+        }
+        else if (sceneName == "Level2")
+        {
+            _background.GetComponent<MeshRenderer>().material = _level2;
+        }
         GetComponent<Animator>().SetTrigger("occurrence");
     }
     public void StartLevel()
