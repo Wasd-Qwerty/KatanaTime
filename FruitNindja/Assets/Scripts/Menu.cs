@@ -33,7 +33,11 @@ public class Menu : MonoBehaviour
     public Changing_Hands _changingHands;
 
     bool notapause = false;
-
+    bool ispaused = false;
+    void Changing_Afnimation()
+    {
+        ispaused = !ispaused;
+    }
 
     void Start()
     {
@@ -48,8 +52,8 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        /*if ((Input.GetKeyDown(KeyCode.Escape)) && notapause == false) Pause();
-        if ((Input.GetKeyDown(KeyCode.Space)) && notapause == false) Continue();*/
+        if ((Input.GetKeyDown(KeyCode.Escape)) && notapause == false) Pause();
+        if ((Input.GetKeyDown(KeyCode.Space)) && notapause == false) TVunactive();
         if (OVRInput.GetDown(OVRInput.Button.Three) && notapause == false)
         {
             Pause();
@@ -91,32 +95,21 @@ public class Menu : MonoBehaviour
 
     void Pause()
     {
-        _changingHands.Death();
-        if (!notapause)
+        if (ispaused == false)
         {
-            Continue();
-        }
-
-        TVAnimator.Play("TVactive");
-        ScreenActive();
-        PauseScreen.SetActive(true);
-        Time.timeScale = 0f;
-        try
-        {
-            foreach (var obj in cookController.objectsOnScene)
+            _changingHands.Death();
+            if (!notapause)
             {
-                Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
-                if (rotation_Physics != null)
-                {
-                    rotation_Physics.enabled = false;
-                }
+                Continue();
             }
-        }
-        catch
-        {
-            foreach (var obj in cookController.objectsOnScene)
+
+            TVAnimator.Play("TVactive");
+            ScreenActive();
+            PauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+            try
             {
-                if (obj != null)
+                foreach (var obj in cookController.objectsOnScene)
                 {
                     Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
                     if (rotation_Physics != null)
@@ -125,16 +118,33 @@ public class Menu : MonoBehaviour
                     }
                 }
             }
+            catch
+            {
+                foreach (var obj in cookController.objectsOnScene)
+                {
+                    if (obj != null)
+                    {
+                        Rotation_Physics rotation_Physics = obj.GetComponent<Rotation_Physics>();
+                        if (rotation_Physics != null)
+                        {
+                            rotation_Physics.enabled = false;
+                        }
+                    }
+                }
+            }
         }
     }
 
     public void TVunactive()
     { 
-        _changingHands.Death();
+        if(ispaused == true)
+        {
+            _changingHands.Death();
 
-        TVAnimator.Play("TVunactive");
-        ScreenUnActive();
-        PauseScreen.SetActive(false);
+            TVAnimator.Play("TVunactive");
+            ScreenUnActive();
+            PauseScreen.SetActive(false);
+        }
     }
     public void Continue()
     {
