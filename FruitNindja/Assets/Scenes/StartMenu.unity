@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 53ea01887b4884e48a3d2e5563d87daa, type: 3}
+    clip: {fileID: 8300000, guid: d0ded61906c65fc44be66924e9cc9f67, type: 3}
   sfxSounds:
   - name: Hurt
     clip: {fileID: 8300000, guid: cd5b3427208b88b4490e2689685106a6, type: 3}
