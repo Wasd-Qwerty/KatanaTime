@@ -490,7 +490,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.052
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1247486094445305272, guid: 58e991b7b9ad95b4fb12cfce3855706c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58e991b7b9ad95b4fb12cfce3855706c, type: 3}
 --- !u!4 &222435384 stripped
 Transform:
@@ -512,6 +513,10 @@ PrefabInstance:
     - target: {fileID: 1829819806, guid: ec1856cfcf162e04f9c55a7c408690a5, type: 3}
       propertyPath: _stove
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829819806, guid: ec1856cfcf162e04f9c55a7c408690a5, type: 3}
+      propertyPath: _levelIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1829819806, guid: ec1856cfcf162e04f9c55a7c408690a5, type: 3}
       propertyPath: _scoreManager
@@ -750,10 +755,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cd5b3427208b88b4490e2689685106a6, type: 3}
   - name: Slice
     clip: {fileID: 8300000, guid: 547bda83fbbfa1140bf17b4aa45df88c, type: 3}
-  - name: No
-    clip: {fileID: 8300000, guid: b71e69ed7d2dac543a6638440f598152, type: 3}
-  - name: Yes
-    clip: {fileID: 8300000, guid: d967c326b3104724eb9da7f8628e5e33, type: 3}
+  - name: Skovorodka
+    clip: {fileID: 8300000, guid: 357dab628343d1a43aa2654eb3ed7278, type: 3}
+  - name: Doska
+    clip: {fileID: 8300000, guid: 629d98dfeb0e187469199909817b1100, type: 3}
+  - name: Win
+    clip: {fileID: 8300000, guid: 1c16532fce5d66b47ba7f1713ff4f50d, type: 3}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 8d43ed090ed3bf946a12636eee893541, type: 3}
   musicSource: {fileID: 1767333663}
   sfxSource: {fileID: 747060096}
   musicOn: 1
@@ -800,15 +809,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.52083504
+      value: -0.3264755
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.85365736
+      value: 0.9452057
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -820,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 242.77701
+      value: 218.11
       objectReference: {fileID: 0}
     - target: {fileID: 6926095691941934493, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -842,6 +851,10 @@ PrefabInstance:
       propertyPath: cookController
       value: 
       objectReference: {fileID: 1371399213}
+    - target: {fileID: 7463825952564159258, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TVunactive
+      objectReference: {fileID: 0}
     - target: {fileID: 7463825953354092622, guid: 8ec569df6c940c241954a2e3c35bd9f0, type: 3}
       propertyPath: pointer
       value: 
@@ -1088,6 +1101,10 @@ PrefabInstance:
     - target: {fileID: 196477110233249891, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
       propertyPath: _stove
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 196477110233249891, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
+      propertyPath: _levelIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 196477110233249891, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
       propertyPath: _scoreManager

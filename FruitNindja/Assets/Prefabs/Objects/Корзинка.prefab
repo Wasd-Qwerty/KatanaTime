@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 637949407474519127, guid: b5fb5be12e8a07a428f3a662cf944ff7, type: 3}
+  - {fileID: 637949407474519127, guid: 5fc17882f8f2272408706a3e7cab68cd, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stoveAnimator: {fileID: 0}
-  _forceTransform: {fileID: 0}
+  _forcePos: {x: 0, y: 0, z: 0}
   _isBatting: 0
 --- !u!114 &4240901265588554961
 MonoBehaviour:

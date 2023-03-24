@@ -14,10 +14,13 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _mainUI;
     [SerializeField] private GameObject _levelsUI;
     [SerializeField] private GameObject _settingsUI;
+    [SerializeField] private GameObject _sureCheckUI;
 
     [SerializeField] private Text _musicButtonText;
     [SerializeField] private Text _sfxButtonText;
-    
+
+    [SerializeField] private List<GameObject> _levelObjects;
+
     private Color[] _colors = 
      {
          Color.red,
@@ -27,29 +30,29 @@ public class MenuManager : MonoBehaviour
     
     private void Start()
     {
-
-        if (PlayerPrefs.HasKey("SettingsMusicOn"))
-        {
-            var musicOnInt =  PlayerPrefs.GetInt("SettingsMusicOn");
-            AudioManager.Instance.musicOn = musicOnInt == 1;
-        }
-        if (PlayerPrefs.HasKey("SettingsSfxOn"))
-        {
-            var sfxOnInt =  PlayerPrefs.GetInt("SettingsSfxOn");
-            AudioManager.Instance.sfxOn = sfxOnInt == 1;
-        }
+        CheckAudioSettings();
         Time.timeScale = 1;
         ShowMain();
         LevelLoadInfo();
+        
     }
 
+    private void ShowLevelObjects()
+    {
+        var estimationForUnlock = new List<string>() { "S", "A", "B"};
+        for (var i = 0; i < _scenesInfo.Count; i++)
+        {
+            _levelObjects[i].SetActive(estimationForUnlock.Contains(_scenesInfo[i].estimation.text));
+        }
+    }
+    
     private void Update()
     {
         foreach (var sceneInfo in _scenesInfo)
         {
             sceneInfo.estimation.color = CheckColorForEstimation(sceneInfo.estimation.text);
         }
-
+        ShowLevelObjects();
         CheckColorAudioSettings();
     }
 
@@ -59,6 +62,26 @@ public class MenuManager : MonoBehaviour
         _sfxButtonText.color = AudioManager.Instance.sfxOn ? Color.green : Color.red;
     }
 
+    private void CheckAudioSettings()
+    {
+        if (PlayerPrefs.HasKey("SettingsMusicOn"))
+        {
+            AudioManager.Instance.musicOn = PlayerPrefs.GetInt("SettingsMusicOn") == 1;
+        }
+        else
+        {
+            AudioManager.Instance.musicOn = true;
+        }
+
+        if (PlayerPrefs.HasKey("SettingsSfxOn"))
+        {
+            AudioManager.Instance.sfxOn = PlayerPrefs.GetInt("SettingsSfxOn") == 1;
+        }
+        else
+        {
+            AudioManager.Instance.sfxOn = true;
+        }
+    }
     private void LevelLoadInfo()
     {
         foreach (var sceneInfo in _scenesInfo)
@@ -87,8 +110,8 @@ public class MenuManager : MonoBehaviour
 
     private void Zaserino()
     {
-        List<string> estimationForUnlock = new List<string>() { "S", "A", "B"};
-        for (int i = 1; i < _scenesInfo.Count; i++)
+        var estimationForUnlock = new List<string>() { "S", "A", "B"};
+        for (var i = 1; i < _scenesInfo.Count; i++)
         {
             _scenesInfo[i].unlocked = estimationForUnlock.Contains(_scenesInfo[i - 1].estimation.text);
         }
@@ -132,6 +155,8 @@ public class MenuManager : MonoBehaviour
         _mainUI.SetActive(false);
         _levelsUI.SetActive(true);
         _settingsUI.SetActive(false);
+        _sureCheckUI.SetActive(false);
+
     }
 
     public void ShowMain()
@@ -139,18 +164,30 @@ public class MenuManager : MonoBehaviour
         _mainUI.SetActive(true);
         _levelsUI.SetActive(false);
         _settingsUI.SetActive(false);
+        _sureCheckUI.SetActive(false);
+
     }
     public void ShowSettings()
     {
         _mainUI.SetActive(false);
         _levelsUI.SetActive(false);
         _settingsUI.SetActive(true);
+        _sureCheckUI.SetActive(false);
     }
-
+    public void ShowSureCheck()
+    {
+        _mainUI.SetActive(false);
+        _levelsUI.SetActive(false);
+        _settingsUI.SetActive(false);
+        _sureCheckUI.SetActive(true);
+    }
+    
     public void ResetData()
     {
         PlayerPrefs.DeleteAll();
+        CheckAudioSettings();
         LevelLoadInfo();
+        ShowSettings();
     }
 
     

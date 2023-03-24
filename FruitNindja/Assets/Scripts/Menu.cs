@@ -69,6 +69,8 @@ public class Menu : MonoBehaviour
 
     public void ShowGameOverUI()
     {
+        AudioManager.Instance.PlaySFX("Lose");
+        AudioManager.Instance.musicOn = false;
         TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;
@@ -79,6 +81,7 @@ public class Menu : MonoBehaviour
 
     public void ShowWinUI()
     {
+        AudioManager.Instance.PlaySFX("Win");
         TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;

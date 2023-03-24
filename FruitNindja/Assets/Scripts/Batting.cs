@@ -12,27 +12,27 @@ public class Batting : MonoBehaviour
     public LayerMask edibleLayer;
     public LayerMask inedibleLayer;
 
+    [SerializeField] private int _levelIndex;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if ((edibleLayer & (1 << collision.gameObject.layer)) != 0)
+        if ((edibleLayer & (1 << collision.gameObject.layer)) == 0 &&
+            (inedibleLayer & (1 << collision.gameObject.layer)) == 0) return;
+        
+        collision.gameObject.GetComponent<BattingObject>()._stoveAnimator = _stoveAnimator;
+        collision.gameObject.GetComponent<BattingObject>()._forcePos = _forceTransform.position;
+            
+        collision.gameObject.GetComponent<BattingObject>()._isBatting = true;
+        Destroy(collision.gameObject.GetComponent<Collider>());
+        collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        switch (_levelIndex)
         {
-            _scoreManager.DecreaseScore(decreaseNumber);
-            // AudioManager.Instance.PlaySFX("No");
-        }
-        else if ((inedibleLayer & (1 << collision.gameObject.layer)) != 0)
-        {
-            // AudioManager.Instance.PlaySFX("Yes");
-        }
-
-        if ((edibleLayer & (1 << collision.gameObject.layer)) != 0 ||
-            (inedibleLayer & (1 << collision.gameObject.layer)) != 0)
-        {
-            collision.gameObject.GetComponent<BattingObject>()._stoveAnimator = _stoveAnimator;
-            collision.gameObject.GetComponent<BattingObject>()._forcePos = _forceTransform.position;
-
-            collision.gameObject.GetComponent<BattingObject>()._isBatting = true;
-            Destroy(collision.gameObject.GetComponent<Collider>());
-            collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            case 1:
+                AudioManager.Instance.PlaySFX("Skovorodka");
+                break;
+            case 2:
+                AudioManager.Instance.PlaySFX("Doska");
+                break;
         }
     }
 }
