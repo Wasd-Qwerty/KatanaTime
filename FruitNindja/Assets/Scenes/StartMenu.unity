@@ -1372,7 +1372,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3146,14 +3146,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cd5b3427208b88b4490e2689685106a6, type: 3}
   - name: Slice
     clip: {fileID: 8300000, guid: 547bda83fbbfa1140bf17b4aa45df88c, type: 3}
-  - name: Skovorodka
-    clip: {fileID: 8300000, guid: 357dab628343d1a43aa2654eb3ed7278, type: 3}
   - name: Doska
+    clip: {fileID: 8300000, guid: 357dab628343d1a43aa2654eb3ed7278, type: 3}
+  - name: Skovorodka
     clip: {fileID: 8300000, guid: 629d98dfeb0e187469199909817b1100, type: 3}
   - name: Win
     clip: {fileID: 8300000, guid: 1c16532fce5d66b47ba7f1713ff4f50d, type: 3}
   - name: Lose
     clip: {fileID: 8300000, guid: 8d43ed090ed3bf946a12636eee893541, type: 3}
+  - name: LoseHurt
+    clip: {fileID: 8300000, guid: 6f6468631cde12043977ad09106e7fa3, type: 3}
   musicSource: {fileID: 425499356}
   sfxSource: {fileID: 321575807}
   musicOn: 1

@@ -69,8 +69,8 @@ public class Menu : MonoBehaviour
 
     public void ShowGameOverUI()
     {
-        AudioManager.Instance.PlaySFX("Lose");
-        AudioManager.Instance.musicOn = false;
+        AudioManager.Instance.PlayMusic("Lose"); 
+        AudioManager.Instance.PlaySFX("LoseHurt"); 
         TVAnimator.Play("TVactive");
         ScreenActive();
         notapause = true;
@@ -174,6 +174,7 @@ public class Menu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
+        AudioManager.Instance.PlayMusic("Theme");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void MainMenu()

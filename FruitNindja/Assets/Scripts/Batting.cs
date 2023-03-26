@@ -16,6 +16,10 @@ public class Batting : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if ((edibleLayer & (1 << collision.gameObject.layer)) != 0)
+        {
+            _scoreManager.DecreaseScore(decreaseNumber);
+        }
         if ((edibleLayer & (1 << collision.gameObject.layer)) == 0 &&
             (inedibleLayer & (1 << collision.gameObject.layer)) == 0) return;
         

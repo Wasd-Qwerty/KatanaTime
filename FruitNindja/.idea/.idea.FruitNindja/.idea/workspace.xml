@@ -12,7 +12,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BeforeDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cooker/CookLevel1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cooker/CookLevel2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveRenderTextureToFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,6 +119,7 @@
       <workItem from="1679472732960" duration="6340000" />
       <workItem from="1679562391923" duration="15106000" />
       <workItem from="1679641049978" duration="4642000" />
+      <workItem from="1679646316364" duration="3827000" />
     </task>
     <servers />
   </component>
