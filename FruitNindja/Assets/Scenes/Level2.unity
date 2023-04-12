@@ -11499,6 +11499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1320986040}
     m_Modifications:
+    - target: {fileID: 1562266010823251115, guid: ee03934c5f961214494d2c9529d9e22c, type: 3}
+      propertyPath: m_Name
+      value: left_hand_with_cleaver
+      objectReference: {fileID: 0}
     - target: {fileID: 3195162960546499707, guid: ee03934c5f961214494d2c9529d9e22c, type: 3}
       propertyPath: _scoreManager
       value: 
@@ -30868,6 +30872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2143244341259014327, guid: 03b71918518e45e429b03af18ca371b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3031361023464644381, guid: 03b71918518e45e429b03af18ca371b2, type: 3}
       propertyPath: _levelIndex
       value: 2
@@ -33054,6 +33062,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5750344003960387698, guid: e236227f3b9a8fb4b95db882bf835ae7, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439704195157334551, guid: e236227f3b9a8fb4b95db882bf835ae7, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -36423,7 +36435,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -38197,7 +38209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2717647940322188002, guid: ff3a5e7554c7b63438d54222d0b16fe7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2717647940322188002, guid: ff3a5e7554c7b63438d54222d0b16fe7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38337,7 +38349,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

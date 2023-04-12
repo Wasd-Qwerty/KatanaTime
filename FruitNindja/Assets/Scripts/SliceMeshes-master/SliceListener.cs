@@ -20,10 +20,6 @@ public class SliceListener : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider>();
     }
 
-    private void Update()
-    {
-        Debug.Log(transform.rotation.eulerAngles.y);
-    }
 
     private void FixedUpdate()
     {

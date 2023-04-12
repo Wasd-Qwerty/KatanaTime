@@ -3141,6 +3141,8 @@ MonoBehaviour:
   musicSounds:
   - name: Theme
     clip: {fileID: 8300000, guid: d0ded61906c65fc44be66924e9cc9f67, type: 3}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 8d43ed090ed3bf946a12636eee893541, type: 3}
   sfxSounds:
   - name: Hurt
     clip: {fileID: 8300000, guid: cd5b3427208b88b4490e2689685106a6, type: 3}
@@ -3152,8 +3154,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 629d98dfeb0e187469199909817b1100, type: 3}
   - name: Win
     clip: {fileID: 8300000, guid: 1c16532fce5d66b47ba7f1713ff4f50d, type: 3}
-  - name: Lose
-    clip: {fileID: 8300000, guid: 8d43ed090ed3bf946a12636eee893541, type: 3}
   - name: LoseHurt
     clip: {fileID: 8300000, guid: 6f6468631cde12043977ad09106e7fa3, type: 3}
   musicSource: {fileID: 425499356}

@@ -14,21 +14,21 @@ public class Batting : MonoBehaviour
 
     [SerializeField] private int _levelIndex;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if ((edibleLayer & (1 << collision.gameObject.layer)) != 0)
+        if ((edibleLayer & (1 << collider.gameObject.layer)) != 0)
         {
             _scoreManager.DecreaseScore(decreaseNumber);
         }
-        if ((edibleLayer & (1 << collision.gameObject.layer)) == 0 &&
-            (inedibleLayer & (1 << collision.gameObject.layer)) == 0) return;
+        if ((edibleLayer & (1 << collider.gameObject.layer)) == 0 &&
+            (inedibleLayer & (1 << collider.gameObject.layer)) == 0) return;
         
-        collision.gameObject.GetComponent<BattingObject>()._stoveAnimator = _stoveAnimator;
-        collision.gameObject.GetComponent<BattingObject>()._forcePos = _forceTransform.position;
+        collider.gameObject.GetComponent<BattingObject>()._stoveAnimator = _stoveAnimator;
+        collider.gameObject.GetComponent<BattingObject>()._forcePos = _forceTransform.position;
             
-        collision.gameObject.GetComponent<BattingObject>()._isBatting = true;
-        Destroy(collision.gameObject.GetComponent<Collider>());
-        collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        collider.gameObject.GetComponent<BattingObject>()._isBatting = true;
+        Destroy(collider.gameObject.GetComponent<Collider>());
+        collider.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         switch (_levelIndex)
         {
             case 1:

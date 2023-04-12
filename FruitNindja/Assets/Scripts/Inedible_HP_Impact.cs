@@ -14,12 +14,13 @@ public class Inedible_HP_Impact : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "LeftHandPan" || collision.gameObject.name == "RightHandPan")
         {
             Destroy(this);
         }
-
-        if (collision.gameObject.name == "right_hand_with_knife" || collision.gameObject.name == "left_hand_with_knife")
+        
+        if (collision.gameObject.name == "right_hand_with_knife" || collision.gameObject.name == "left_hand_with_knife" || collision.gameObject.name == "right_hand_with_cleaver" || collision.gameObject.name == "left_hand_with_cleaver" )
         {
             GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
             gameObject.layer = 0;

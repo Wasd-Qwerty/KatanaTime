@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: _forceTransform
       value: 
       objectReference: {fileID: 222435384}
+    - target: {fileID: 1829819807, guid: ec1856cfcf162e04f9c55a7c408690a5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5795295683867333250, guid: ec1856cfcf162e04f9c55a7c408690a5, type: 3}
       propertyPath: m_Name
       value: RightHandPan
@@ -1118,6 +1122,10 @@ PrefabInstance:
       propertyPath: _forceTransform
       value: 
       objectReference: {fileID: 222435384}
+    - target: {fileID: 1423253517478613013, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4853123368743636560, guid: b33141d2e9243b04c92abc5effce3520, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2551,6 +2559,10 @@ PrefabInstance:
       propertyPath: _cookController
       value: 
       objectReference: {fileID: 1371399213}
+    - target: {fileID: 5003839295847129525, guid: 1b860372eb5af70439a6898cb136cee2, type: 3}
+      propertyPath: m_text
+      value: C
+      objectReference: {fileID: 0}
     - target: {fileID: 5309845674811053707, guid: 1b860372eb5af70439a6898cb136cee2, type: 3}
       propertyPath: m_Name
       value: "\u0434\u043E\u0441\u043A\u0430"
