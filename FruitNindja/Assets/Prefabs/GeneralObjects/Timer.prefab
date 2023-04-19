@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9143647470970908520}
   - component: {fileID: 9143647470970908521}
   m_Layer: 0
-  m_Name: TimeCanvas
+  m_Name: ScoreCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9143647471622637859}
   - component: {fileID: 9143647471622637884}
+  - component: {fileID: 9143647471428987894}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -315,17 +316,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cbfea5b64d3794a9924bbafae87756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeInSecond: 100
+  timeInSecond: 0
   _menu: {fileID: 0}
   _cook: {fileID: 0}
-  timeText: {fileID: 9143647472266955247}
+--- !u!114 &9143647471428987894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143647471622637885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3e9e6cdc644484eabd3e2d4155c427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 9143647472266955247}
+  _needScoreText: {fileID: 0}
+  _healthBar: {fileID: 0}
+  _menu: {fileID: 0}
+  _cookAnimator: {fileID: 0}
+  _trackTime: {fileID: 9143647471622637884}
+  _needScore: 3000
   _timeScroller: {fileID: 9143647471728656864}
   _timePoint: {fileID: 9143647471084983374}
   _minPointPos: -0.45
   _maxPointPos: 0.67
   _minScrollerScale: 0
   _maxScrollerScale: 0.73
-  _scoreManager: {fileID: 0}
 --- !u!1 &9143647471728656864
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +439,7 @@ GameObject:
   - component: {fileID: 9143647472266955240}
   - component: {fileID: 9143647472266955247}
   m_Layer: 0
-  m_Name: Time
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

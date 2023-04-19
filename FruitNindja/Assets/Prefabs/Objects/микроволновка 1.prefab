@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6172590256617443604}
   - component: {fileID: -2173733550925430399}
   - component: {fileID: 4108959635752734813}
+  - component: {fileID: -784760016449030177}
   m_Layer: 11
   m_Name: "\u043C\u0438\u043A\u0440\u043E\u0432\u043E\u043B\u043D\u043E\u0432\u043A\u0430
     1"
@@ -136,6 +137,7 @@ MonoBehaviour:
   _stoveAnimator: {fileID: 0}
   _forcePos: {x: 0, y: 0, z: 0}
   _isBatting: 0
+  _isSliced: 0
 --- !u!114 &-2173733550925430399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +165,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a54ceba9e88b3747a743ecbcdd45b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-784760016449030177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737262561433055104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -3,27 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="78a97ac4-3771-4ebb-b3f9-c3b7d9fc9b61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNindja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNindja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/арбузяка.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/арбузяка.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/банан.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/банан.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/батон.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/батон.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/валенок.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/валенок.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/ведро.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/ведро.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/капуста.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/капуста.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/кастрюля.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/кастрюля.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/корзина.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/корзина.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/микроволновка.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/микроволновка.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/сыр.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/сыр.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/тазик.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/тазик.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/торт.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/торт.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/тостер.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/тостер.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/тыква.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/тыква.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/чайник.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/чайник.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/FinishObjects/яблоко.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FinishObjects/яблоко.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cook/level1/FridgePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cook/level1/FridgePrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cook/Cook.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cook/Cook.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cook/level3/SpongBob.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cook/level3/SpongBob.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Kladovka/кладовка2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Kladovka/кладовка2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Батон.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Батон.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1.renderTexture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1.renderTexture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1.renderTexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1.renderTexture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1bg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level1bg.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2.renderTexture.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2.renderTexture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2.renderTexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2.renderTexture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2bg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Level2bg.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door/Дверь.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door/Дверь.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GeneralObjects/Timer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GeneralObjects/Timer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GeneralObjects/доска.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GeneralObjects/доска.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Тыква.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Тыква.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/валенок.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/валенок.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/ведро 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/ведро 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/кастрюля 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/кастрюля 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/корзина.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/корзина.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/микроволновка 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/микроволновка 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/тазик 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/тазик 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/тостер.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/тостер.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/чайник 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/чайник 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TV/TV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TV/TV.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level/LightingData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level/Lightmap-0_comp_dir.png" afterDir="false" />
@@ -35,16 +35,20 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Batting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Batting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattingObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattingObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattingObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattingObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cooker/CookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cooker/CookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BeforeDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BeforeDestroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inedible_HP_Impact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inedible_HP_Impact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SliceMeshes-master/SlicerMeshes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +175,7 @@
       <workItem from="1681640844741" duration="1497000" />
       <workItem from="1681822283129" duration="592000" />
       <workItem from="1681833397352" duration="783000" />
-      <workItem from="1681920395465" duration="4339000" />
+      <workItem from="1681920395465" duration="17926000" />
     </task>
     <servers />
   </component>

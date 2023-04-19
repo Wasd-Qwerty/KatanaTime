@@ -16,10 +16,7 @@ public class BeforeDestroy : MonoBehaviour
     private IEnumerator Death()
     {
         yield return new WaitForSeconds(second);
-        if ((_scoreManager.edibleLayer & (1 << gameObject.layer)) != 0)
-        {
-            _scoreManager.countOfEdible++;
-        }
+        
         Destroy(gameObject);
     }
 }

@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Theme");
+        musicSource.pitch = 1;
     }
 
     private void Update()
@@ -47,6 +48,14 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            if (name == "Spanch")
+            {
+                musicSource.pitch = 0.8f;
+            }
+            else
+            {
+                musicSource.pitch = 1;
+            }
             musicSource.clip = s.clip;
             musicSource.Play();
         }

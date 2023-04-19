@@ -25,7 +25,6 @@ public class Inedible_HP_Impact : MonoBehaviour
         
         if (collision.gameObject.name == "right_hand_with_knife" || collision.gameObject.name == "left_hand_with_knife" || collision.gameObject.name == "right_hand_with_cleaver" || collision.gameObject.name == "left_hand_with_cleaver" )
         {
-            Debug.Log("На сука");
             GameObject.Find("OVRCameraRig").GetComponent<HealthBar>().Damage();
             gameObject.layer = 0;
             Destroy(GetComponent<Collider>());

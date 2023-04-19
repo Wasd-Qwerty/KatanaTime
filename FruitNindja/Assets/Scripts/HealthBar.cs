@@ -6,8 +6,6 @@ public class HealthBar : MonoBehaviour
     public int health;
     public TextMeshProUGUI health_txt_right;
     public TextMeshProUGUI health_txt_left;
-    [SerializeField] private TrackTime _trackTime;
-    [SerializeField] private ScoreManager _scoreManager;
     [SerializeField] private Animator _cookAnimator;
 
     public int damage;
@@ -26,7 +24,7 @@ public class HealthBar : MonoBehaviour
             AudioManager.Instance.PlaySFX("Hurt");
             if (health == 0)
             {
-                _trackTime.StopTrack();
+                
                 Death();
             }
         }

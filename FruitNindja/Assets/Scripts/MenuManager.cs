@@ -39,19 +39,15 @@ public class MenuManager : MonoBehaviour
 
     private void ShowLevelObjects()
     {
-        var estimationForUnlock = new List<string>() { "S", "A", "B"};
         for (var i = 0; i < _scenesInfo.Count; i++)
         {
-            _levelObjects[i].SetActive(estimationForUnlock.Contains(_scenesInfo[i].estimation.text));
+            Debug.Log("Время " + i +" уровня: " + _scenesInfo[i].bestTime.text);
+            _levelObjects[i].SetActive(_scenesInfo[i].bestTime.text != "none");
         }
     }
     
     private void Update()
     {
-        foreach (var sceneInfo in _scenesInfo)
-        {
-            sceneInfo.estimation.color = CheckColorForEstimation(sceneInfo.estimation.text);
-        }
         ShowLevelObjects();
         CheckColorAudioSettings();
     }
@@ -86,22 +82,13 @@ public class MenuManager : MonoBehaviour
     {
         foreach (var sceneInfo in _scenesInfo)
         {
-            if (PlayerPrefs.HasKey(sceneInfo.nameOfScene + "BestScore"))
+            if (PlayerPrefs.HasKey(sceneInfo.nameOfScene + "time"))
             {
-                sceneInfo.bestScore.text = PlayerPrefs.GetInt(sceneInfo.nameOfScene + "BestScore").ToString();
+                sceneInfo.bestTime.text = PlayerPrefs.GetInt(sceneInfo.nameOfScene + "time").ToString();
             }
             else
             {
-                sceneInfo.bestScore.text = "none";
-            }
-            if (PlayerPrefs.HasKey(sceneInfo.nameOfScene + "Estimation"))
-            {
-                var estimation = PlayerPrefs.GetString(sceneInfo.nameOfScene + "Estimation");
-                sceneInfo.estimation.text = estimation;
-            }
-            else
-            {
-                sceneInfo.estimation.text = "none";
+                sceneInfo.bestTime.text = "none";
             }
         }
 
@@ -110,10 +97,9 @@ public class MenuManager : MonoBehaviour
 
     private void Zaserino()
     {
-        var estimationForUnlock = new List<string>() { "S", "A", "B"};
         for (var i = 1; i < _scenesInfo.Count; i++)
         {
-            _scenesInfo[i].unlocked = estimationForUnlock.Contains(_scenesInfo[i - 1].estimation.text);
+            _scenesInfo[i].unlocked = _scenesInfo[i - 1].bestTime.text != "none";
         }
 
         foreach (var sceneInfo in _scenesInfo)
@@ -122,26 +108,6 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    Color CheckColorForEstimation(string estimation)
-    {
-        if (estimation == "none")
-        {
-            return Color.black;
-        }
-        if (estimation == "S")
-        {
-            return _colors[Random.Range(0,_colors.Length)];
-        }
-        if (estimation == "A")
-        {
-            return Color.green;
-        }
-        if (estimation == "B")
-        {
-            return Color.yellow;
-        }
-        return Color.red;
-    }
 
     public void StartLevel(GameObject level)
     {

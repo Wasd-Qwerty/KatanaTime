@@ -41,8 +41,6 @@ public class SlicerMeshes : MonoBehaviour
                 Destroy(_upperHull, _timeToDestroy);
                 Destroy(_lowerHull, _timeToDestroy);
                 AudioManager.Instance.PlaySFX("Slice");
-                
-                _scoreManager.countOfEdible++;
                 _scoreManager.IncreaseScore(_editNumberForIncrease);
             }
             catch (Exception)

@@ -19,8 +19,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject LoseScreen;
 
     [Space]
-    [SerializeField] private GameObject score;
-    [SerializeField] private Text _scoreText;
+    [SerializeField] private TrackTime time;
+    [SerializeField] private Text _timeText;
 
     [Space]
     [SerializeField] private CookController cookController;
@@ -87,7 +87,7 @@ public class Menu : MonoBehaviour
         notapause = true;
 
         WinScreen.SetActive(true);
-        _scoreText.text = score.GetComponent<TextMeshProUGUI>().text;
+        _timeText.text = time.timeInSecond.ToString();
 
         _changingHands.Death();
     }
