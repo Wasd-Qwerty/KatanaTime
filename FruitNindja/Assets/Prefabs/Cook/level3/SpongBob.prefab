@@ -224,32 +224,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectsPrefabs:
   - {fileID: 2946613739763404854, guid: b04ae662bbbf00541a54c257494601d6, type: 3}
-  - {fileID: 294266228988787825, guid: 0818b738f433ff742b3077f13db3c464, type: 3}
-  - {fileID: 8421954029374819299, guid: 694d596b2963a4543997193d2c89c492, type: 3}
   - {fileID: 4633546833740292089, guid: c28da0a94360a104996ba00c854e2573, type: 3}
-  - {fileID: 2853968094118642225, guid: e4c9f2e1a78d44a4b8bbe57b77aedba7, type: 3}
-  - {fileID: 450005930903755215, guid: b8c935d3efc352a48a2367a0edcf52a4, type: 3}
-  - {fileID: 2065748130999037035, guid: 5fa609b24fe434348a1a93761446da8e, type: 3}
   - {fileID: 7164669102600440438, guid: cebc453cfc3f4ed4fad25d06808d7dad, type: 3}
-  - {fileID: 8449175997988331610, guid: 956ce8c0b028f7c41a383e5dac8e9935, type: 3}
-  - {fileID: 2065748130999037035, guid: 5fa609b24fe434348a1a93761446da8e, type: 3}
-  - {fileID: 1729660691401410278, guid: c3f7bb05b880159469e1c0b443a8df92, type: 3}
-  - {fileID: 9013998162989249907, guid: b7c70682be0c01549b77d987fa9cde72, type: 3}
-  - {fileID: 8809515810759994803, guid: 7b088af1729543e4cb711cd83bd51190, type: 3}
-  - {fileID: 4394235544457045307, guid: 7beb72ef6e83ade4dade79147fa3dc44, type: 3}
-  - {fileID: 5438508261987575186, guid: ebab7fd93a12f2b43acbb3c7e71a6149, type: 3}
-  - {fileID: 294266228988787825, guid: 0818b738f433ff742b3077f13db3c464, type: 3}
-  - {fileID: 5438508261987575186, guid: ebab7fd93a12f2b43acbb3c7e71a6149, type: 3}
-  - {fileID: 4583737498891604645, guid: ec0663802a43d2b4e97c6b0caec49365, type: 3}
   - {fileID: 9013998162989249907, guid: b7c70682be0c01549b77d987fa9cde72, type: 3}
   - {fileID: 4394235544457045307, guid: 7beb72ef6e83ade4dade79147fa3dc44, type: 3}
+  - {fileID: 5438508261987575186, guid: ebab7fd93a12f2b43acbb3c7e71a6149, type: 3}
+  - {fileID: 5438508261987575186, guid: ebab7fd93a12f2b43acbb3c7e71a6149, type: 3}
+  - {fileID: 9013998162989249907, guid: b7c70682be0c01549b77d987fa9cde72, type: 3}
+  - {fileID: 4394235544457045307, guid: 7beb72ef6e83ade4dade79147fa3dc44, type: 3}
+  - {fileID: 8732241819263944048, guid: 7b688f02501f236469434c6a947c6b9b, type: 3}
+  - {fileID: 711750834137156027, guid: 3c8ff49b5c086524e93f55712d176d80, type: 3}
+  - {fileID: 3755558751408831104, guid: 0120b50448d3da542a362360c9bb6cda, type: 3}
+  - {fileID: 6375723821793777686, guid: b7d6fd2c751eed74db3dc4b9b96b247f, type: 3}
+  - {fileID: 8367762255687754064, guid: 197e40908378524419f4cd8d580d631a, type: 3}
+  - {fileID: 7737262561433055104, guid: d02e86d15e3f8e245806369a31876ecf, type: 3}
+  - {fileID: 4385955240416894023, guid: 433c2a23e8b06814b918588d440b48c7, type: 3}
+  - {fileID: 4508445822834611096, guid: 22105ecd73635f64b9147bc086d00571, type: 3}
+  - {fileID: 8912490182277565316, guid: 843d000408ca8ac4a9f246640bc7c046, type: 3}
+  - {fileID: 6375723821793777686, guid: b7d6fd2c751eed74db3dc4b9b96b247f, type: 3}
+  - {fileID: 7737262561433055104, guid: d02e86d15e3f8e245806369a31876ecf, type: 3}
   objectsOnScene: []
   maxCountOfEdible: 85
   countOfEdible: 0
   needOnlyEdible: 0
   _objectSpawnPos:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5921058605448581804}
+  - {fileID: 3087263723249701690}
   _animator: {fileID: 0}
   _forceDirections:
   - {x: 0, y: 0.26, z: -1}

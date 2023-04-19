@@ -92,7 +92,6 @@ public class CookController : MonoBehaviour
             if ((edibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
             {
                 countOfEdible++;
-                Debug.Log("Съедобно: " + countOfEdible);
             }
             objectForInst = Instantiate(objectPrefab, pos.position, Quaternion.identity);
         }
@@ -109,12 +108,10 @@ public class CookController : MonoBehaviour
             if ((edibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
             {
                 countOfEdible++;
-                Debug.Log("Съедобно: " + countOfEdible);
             }
             if ((inedibleLayer & (1 << objectPrefab.gameObject.layer)) != 0)
             {
                 countOfInedible++;
-                Debug.Log("Несъедобно: " + countOfInedible);
             }
             objectForInst = Instantiate(objectPrefab, pos.position, Quaternion.identity);
         }

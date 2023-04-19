@@ -8,6 +8,7 @@ public class BattingObject : MonoBehaviour
     private float _mindistance = 1;
 
     public bool _isBatting = false;
+    public bool _isSliced = false;
     private bool _isStoveAnimatorNotNull;
     private BeforeDestroy _beforeDestroy;
 

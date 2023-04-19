@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using EzySlice;
+using UnityEditor;
 
 public class SlicerMeshes : MonoBehaviour
 {
@@ -20,14 +21,15 @@ public class SlicerMeshes : MonoBehaviour
         {
             try
             {
+                objectToBeSliced.GetComponent<BattingObject>()._isSliced = true;
                 var parrentVelocity = objectToBeSliced.gameObject.GetComponent<Rigidbody>().velocity;
-            
                 SlicedHull slicedObject = SliceObject(objectToBeSliced.gameObject, materialAfterSlice);
                 _upperHull = slicedObject.CreateUpperHull(objectToBeSliced.gameObject, materialAfterSlice);
                 _lowerHull = slicedObject.CreateLowerHull(objectToBeSliced.gameObject, materialAfterSlice);
 
                 _upperHull.transform.position = objectToBeSliced.transform.position;
                 _lowerHull.transform.position = objectToBeSliced.transform.position;
+                Destroy(objectToBeSliced.gameObject);
 
                 MakeItPhysical(_upperHull);
                 MakeItPhysical(_lowerHull);
@@ -35,12 +37,10 @@ public class SlicerMeshes : MonoBehaviour
                 _upperHull.GetComponent<Rigidbody>().velocity = parrentVelocity;
                 _lowerHull.GetComponent<Rigidbody>().velocity = parrentVelocity;
                 
-                AudioManager.Instance.PlaySFX("Slice");
 
                 Destroy(_upperHull, _timeToDestroy);
                 Destroy(_lowerHull, _timeToDestroy);
-
-                Destroy(objectToBeSliced.gameObject);
+                AudioManager.Instance.PlaySFX("Slice");
                 
                 _scoreManager.countOfEdible++;
                 _scoreManager.IncreaseScore(_editNumberForIncrease);
