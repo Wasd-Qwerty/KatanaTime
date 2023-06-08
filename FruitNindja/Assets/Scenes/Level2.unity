@@ -10787,7 +10787,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9143647471428987894, guid: 836f1184972bf2d4498a9411c1bb19e7, type: 3}
-      propertyPath: _menu
       value: 
       objectReference: {fileID: 3406576186292180081}
     - target: {fileID: 9143647471428987894, guid: 836f1184972bf2d4498a9411c1bb19e7, type: 3}
