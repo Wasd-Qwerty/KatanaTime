@@ -60,10 +60,10 @@ public class ScoreManager : MonoBehaviour
         _timePoint.transform.position = pointPosition;
 
             
-        var scaleY = ((_maxScrollerScale - _minScrollerScale ) * ((cacheScore/100f) / (_needScore/100f))) + _minScrollerScale;
+        var scaleX = ((_maxScrollerScale - _minScrollerScale ) * ((cacheScore/100f) / (_needScore/100f))) + _minScrollerScale;
         
         var localScale = _timeScroller.transform.localScale;
-        localScale = new Vector3(localScale.x, scaleY ,localScale.z);
+        localScale = new Vector3(scaleX, localScale.y ,localScale.z);
         _timeScroller.transform.localScale = localScale;
 
     }

@@ -47,6 +47,9 @@ public class Batting : MonoBehaviour
             case 2:
                 AudioManager.Instance.PlaySFX("Doska");
                 break;
+            case 3:
+                AudioManager.Instance.PlaySFX("Doska");
+                break;
         }
     }
 }
